@@ -1,0 +1,9 @@
+name: drdr.xp Blog
+markdown: redcarpet
+pygments: true
+paginate: 3
+description: xp's thought
+
+# Details for the RSS feed generator
+url:            'http://drmingdrmer.github.io/'
+author:         'drdr.xp'
