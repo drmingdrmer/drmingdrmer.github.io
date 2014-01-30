@@ -1,0 +1,14 @@
+{% if site.author %}
+<section class="author">
+    <header>
+        <a href="{{ site.baseurl }}"> <img class="profile" src="/assets/images/profile.jpg"
+            alt="it's me"></a>
+    </header>
+    <article>
+        <h4> {{ site.author }} </h4>
+        <p>
+        {{ site.aboutme }}
+        </p>
+    </article>
+</section>
+{% endif %}
