@@ -1,0 +1,10 @@
+name: drdr.xp Blog
+markdown: redcarpet
+pygments: true
+paginate: 3
+description: xp's thought
+
+author:  'drdr.xp'
+url:     'http://drmingdrmer.github.io'
+email:   'drdr.xp@gmail.com'
+aboutme: 'Software Engineer at Sina'
