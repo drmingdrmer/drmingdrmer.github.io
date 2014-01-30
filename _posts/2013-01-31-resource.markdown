@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Some useful resources"
+date:   2014 Jan 31
+categories: tech programming
+tags: python
+---
+
+[Google's Python Class](https://developers.google.com/edu/python/)
