@@ -4,6 +4,7 @@ pygments: true
 paginate: 3
 description: xp's thought
 
-# Details for the RSS feed generator
-url:            'http://drmingdrmer.github.io/'
-author:         'drdr.xp'
+author:  'drdr.xp'
+url:     'http://drmingdrmer.github.io'
+email:   'drdr.xp@gmail.com'
+aboutme: 'Software Engineer at Sina'
