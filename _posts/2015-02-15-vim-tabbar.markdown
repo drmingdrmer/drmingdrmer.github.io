@@ -6,7 +6,11 @@ categories: tech vim
 tags: vim tab plugin
 ---
 
-[vim-tabbar][vim-tabbar] Simple, stupid and fast tab-bar for VIM.
+<iframe src="https://ghbtns.com/github-btn.html?user=drmingdrmer&repo=vim-tabbar&type=star&count=true&size=large"
+        frameborder="0" scrolling="0"
+        width="170px" height="30px"
+        ></iframe>
+Simple, stupid and fast tab-bar for VIM.
 
 Names of opened buffer are shortened and shows on the top row of window.
 
@@ -41,6 +45,7 @@ hi TabLine     cterm=none ctermfg=white ctermbg=cyan
 hi TabLineSel  cterm=none ctermfg=black ctermbg=white
 ```
 
-Check out on github: [vim-tabbar][vim-tabbar].
+Check out on github:
+[vim-tabbar][vim-tabbar].
 
 [vim-tabbar]: https://github.com/drmingdrmer/vim-tabbar
