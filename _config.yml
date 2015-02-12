@@ -1,8 +1,8 @@
 name: drdr.xp Blog
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 paginate: 3
-description: xp's thought
+description: xp's idea
 
 author:  'drdr.xp'
 url:     'http://drmingdrmer.github.io'
