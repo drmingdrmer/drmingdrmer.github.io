@@ -3,7 +3,11 @@ layout: post
 title:  "Some useful resources"
 date:   2014 Jan 31
 categories: tech programming
-tags: python
+tags: python engineering git
 ---
+
+[Google HTML CSS 代码风格指南](/res/pages/Google_HTML_CSS代码风格指南.html)
+
+[A Note About Git Commit Messages](/res/pages/A_Note_About_Git_Commit_Messages.html)
 
 [Google's Python Class](https://developers.google.com/edu/python/)

@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html><!--
+ Archive processed by SingleFile 
+ url: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html 
+ saved date: Fri Feb 13 2015 21:49:21 GMT+0800 (CST) 
+--><head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <style rel="stylesheet" type="text/css" media="screen, projection" charset="utf-8" data-href="http://tbaggery.com/stylesheets/screen.css">html {
+  background: #222;
+  margin: 0;
+  padding: 0;
+  font: 1.0em sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 720px;
+}
+
+html>body {
+  width: auto;
+  max-width: 720px;
+}
+
+.date {
+  margin-top: -1em;
+  font-size: 0.85em;
+}
+
+#header {
+  background: #aaa;
+  padding: 2em;
+  margin: 0;
+}
+
+#header, #header a {
+  color: white;
+}
+
+#header h1 {
+  font-family: monospace;
+  font-size: 4em;
+  margin: 0;
+  padding: 0;
+}
+
+#header p {
+  margin: 0.5em 0 0 0;
+  padding-left: 0.2em;
+}
+
+a {
+  color: #555;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+h1 {
+  margin-top: 0em;
+  font-size: 1.5em;
+}
+
+#content {
+  background: #fff;
+  padding: 2em;
+}
+
+.post {
+  margin-bottom: 2em;
+}
+
+#footer {
+  text-align: right;
+  background: #aaa;
+  padding: 1em 2em;
+}
+
+#footer a {
+  color: #222;
+}
+
+#footer address {
+  width:  15em;
+  text-align: left;
+  float: left;
+}
+
+img {
+  border: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+.comments_disabled {
+  font-style: italic;
+}
+
+html.error {
+  background-color: #311;
+}
+
+.error #header, .error #footer {
+  background: #c88;
+}
+
+.error #content h1 {
+  font-size: 5em;
+  text-align: center;
+  margin: 0.2em 0;
+  color: #311;
+}
+</style>
+    <style rel="stylesheet" type="text/css" media="screen, projection" charset="utf-8" data-href="http://tbaggery.com/stylesheets/syntax.css">.highlight  { background: #ffffff; }
+.highlight .c { font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .cm { font-style: italic } /* Comment.Multiline */
+.highlight .c1 { font-style: italic } /* Comment.Single */
+.highlight .cs { font-style: italic } /* Comment.Special */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gh { font-weight: bold } /* Generic.Heading */
+.highlight .gp { font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { font-weight: bold } /* Generic.Subheading */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .s { font-style: italic } /* Literal.String */
+.highlight .nc { font-weight: bold } /* Name.Class */
+.highlight .ni { font-weight: bold } /* Name.Entity */
+.highlight .ne { font-weight: bold } /* Name.Exception */
+.highlight .nn { font-weight: bold } /* Name.Namespace */
+.highlight .nt { font-weight: bold } /* Name.Tag */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .sb { font-style: italic } /* Literal.String.Backtick */
+.highlight .sc { font-style: italic } /* Literal.String.Char */
+.highlight .sd { font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { font-style: italic } /* Literal.String.Double */
+.highlight .se { font-weight: bold; font-style: italic } /* Literal.String.Escape */
+.highlight .sh { font-style: italic } /* Literal.String.Heredoc */
+.highlight .si { font-weight: bold; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { font-style: italic } /* Literal.String.Other */
+.highlight .sr { font-style: italic } /* Literal.String.Regex */
+.highlight .s1 { font-style: italic } /* Literal.String.Single */
+.highlight .ss { font-style: italic } /* Literal.String.Symbol */
+</style>
+    <style rel="stylesheet" type="text/css" media="only screen and (max-device-width: 320px)" charset="utf-8" data-href="http://tbaggery.com/stylesheets/iphone.css">html {
+  font-size: 0.65em;
+}
+</style>
+    <link rel="shortcut icon" type="image/x-icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBACAAAAAACwAAAAFgAAACgAAAAQAAAAIAAAAAEAAQAAAAAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAHYfqAAIAAAACAAAAM44AADJQAAACXgAAAlIAAAOMAAAAAAAAAgAAAAIAAAAbjAAAIlIAACJSAAAiUgAAc4wAACAAAAD9/wAA/f8AAMxxAADNrwAA/aEAAP2tAAD8cwAA//8AAP3/AAD9/wAA5HMAAN2tAADdrQAA3a0AAIxzAADf/wAA">
+    <link href="http://feeds.feedburner.com/tpope" rel="alternate" title="tbaggery" type="application/atom+xml">
+    <title>
+      tbaggery
+      
+        - A Note About Git Commit Messages
+      
+    </title>
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="http://undefined/">tbaggery</a></h1>
+      <p>
+        <a href="http://tpo.pe/" title="Tim Pope" rel="author">tpope</a>
+        blogs here, when he blogs.
+      </p>
+    </div>
+    <div id="content">
+      <div class="post">
+  <h1>A Note About Git Commit Messages</h1>
+  <p class="date">19 Apr 2008</p>
+  <p>I want to take a moment to elaborate on what makes a well formed commit message. I think the best practices for commit message formatting is one of the little details that makes Git great. Understandably, some of the first commits to rails.git have messages of the really-long-line variety, and I want to expand on why this is a poor practice.</p>
+
+<p>Here’s a model Git commit message:</p>
+
+<pre><code>Capitalized, short (50 chars or less) summary
+
+More detailed explanatory text, if necessary.  Wrap it to about 72
+characters or so.  In some contexts, the first line is treated as the
+subject of an email and the rest of the text as the body.  The blank
+line separating the summary from the body is critical (unless you omit
+the body entirely); tools like rebase can get confused if you run the
+two together.
+
+Write your commit message in the imperative: "Fix bug" and not "Fixed bug"
+or "Fixes bug."  This convention matches up with commit messages generated
+by commands like git merge and git revert.
+
+Further paragraphs come after blank lines.
+
+- Bullet points are okay, too
+
+- Typically a hyphen or asterisk is used for the bullet, followed by a
+  single space, with blank lines in between, but conventions vary here
+
+- Use a hanging indent</code></pre>
+
+<p>Let’s start with a few of the reasons why wrapping your commit messages to 72 columns is a good thing.</p>
+
+<ul>
+<li><code>git log</code> doesn’t do any special special wrapping of the commit messages. With the default pager of <code>less -S</code>, this means your paragraphs flow far off the edge of the screen, making them difficult to read. On an 80 column terminal, if we subtract 4 columns for the indent on the left and 4 more for symmetry on the right, we’re left with 72 columns.</li>
+
+<li><code>git format-patch --stdout</code> converts a series of commits to a series of emails, using the messages for the message body. Good email netiquette dictates we wrap our plain text emails such that there’s room for a few levels of nested reply indicators without overflow in an 80 column terminal. (The current rails.git workflow doesn’t include email, but who knows what the future will bring.)</li>
+</ul>
+
+<p>Vim users can meet this requirement by installing my <a href="http://github.com/tpope/vim-git">vim-git runtime files</a>, or by simply setting the following option in your git commit message file:</p>
+
+<pre><code>:set textwidth=72</code></pre>
+
+<p>For Textmate, you can adjust the “Wrap Column” option under the view menu, then use <code>^Q</code> to rewrap paragraphs (be sure there’s a blank line afterwards to avoid mixing in the comments). Here’s a shell command to add 72 to the menu so you don’t have to drag to select each time:</p>
+
+<pre><code>$ defaults write com.macromates.textmate OakWrapColumns '( 40, 72, 78 )'</code></pre>
+
+<p>More important than the mechanics of formatting the body is the practice of having a subject line. As the example indicates, you should shoot for about 50 characters (though this isn’t a hard maximum) and always, always follow it with a blank line. This first line should be a concise summary of the changes introduced by the commit; if there are any technical details that cannot be expressed in these strict size constraints, put them in the body instead. The subject line is used all over Git, oftentimes in truncated form if too long of a message was used. The following are just a handful of examples of where it ends up:</p>
+
+<ul>
+<li><code>git log --pretty=oneline</code> shows a terse history mapping containing the commit id and the summary</li>
+
+<li><code>git rebase --interactive</code> provides the summary for each commit in the editor it invokes</li>
+
+<li>if the config option <code>merge.summary</code> is set, the summaries from all merged commits will make their way into the merge commit message</li>
+
+<li><code>git shortlog</code> uses summary lines in the changelog-like output it produces</li>
+
+<li><code>git format-patch</code>, <code>git send-email</code>, and related tools use it as the subject for emails</li>
+
+<li>reflogs, a local history accessible with <code>git reflog</code> intended to help you recover from stupid mistakes, get a copy of the summary</li>
+
+<li><code>gitk</code> has a column for the summary</li>
+
+<li>GitHub uses the summary in various places in their user interface</li>
+</ul>
+
+<p>The subject/body distinction may seem unimportant but it’s one of many subtle factors that makes Git history so much more pleasant to work with than Subversion.</p>
+</div>
+<div class="social">
+  <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1423835002662" name="I0_1423835002662" src="about:blank" data-gapiattached="true" title="+1"></iframe></div>
+  
+    <p class="comments_disabled">
+      Comments disabled.
+      <a id="email" href="http://tbaggery.com/2008/04/19/mailto:tbaggery@tpope.org">Email me</a> instead.
+      
+    </p>
+  
+</div>
+
+    </div>
+    <div id="footer">
+      <address>
+        © <a href="http://tpo.pe/">Tim Pope</a>
+      </address>
+      <a href="http://tpo.pe/feed" rel="alternate" type="application/atom+xml">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJDSURBVHjajJJNSBRhGMd/887MzrQxRSLbFuYhoUhEKsMo8paHUKFLdBDrUIdunvq4RdClOq8Hb0FBSAVCUhFR1CGD/MrIJYqs1kLUXd382N356plZFOrUO/MMz/vO83+e93n+f+1zF+kQBoOQNLBJg0CTj7z/rvWjGbEOIwKp9O7WkhtQc/wMWrlIkP8Kc1lMS8eyFHpkpo5SgWCCVO7Z5JARhuz1Qg29fh87u6/9VWL1/SPc4Qy6n8c0FehiXin6dcCQaylDMhqGz8ydS2hKkmxNkWxowWnuBLHK6G2C8X6UJkBlxUmNqLYyNbzF74QLDrgFgh9LLE0NsPKxjW1Hz2EdPIubsOFdH2HgbwAlC4S19dT13o+3pS+vcSfvUcq9YnbwA6muW9hNpym/FWBxfh0CZkKGkPBZeJFhcWQAu6EN52QGZ/8prEKW+cdXq0039UiLXhUYzdjebOJQQI30UXp6mZn+Dtam32Afu0iyrgUvN0r+ZQbr8HncSpUVJfwRhBWC0hyGV8CxXBL5SWYf9sYBidYLIG2V87/ifVjTWAX6AlxeK2C0X8e58hOr/Qa2XJ3iLMWxB1h72tHs7bgryzHAN2o2gJorTrLxRHVazd0o4TXiyV2Yjs90uzauGvvppmqcLjwmbZ3V7BO2HOrBnbgrQRqWUgTZ5+Snx4WeKfzCCrmb3axODKNH+vvUyWjqyK4DiKQ0eXSpFsgVvLJQWpH+xSpr4otg/HI0TR/t97cxTUS+QxIMRTLi/9ZYJPI/AgwAoc3W7ZrqR2IAAAAASUVORK5CYII=" width="14" height="14" alt="Atom Feed" title="Atom Feed">
+      </a>
+    </div>
+    
+    
+    
+   
+ 
+<iframe name="oauth2relay537177521" id="oauth2relay537177521" src="about:blank" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>
