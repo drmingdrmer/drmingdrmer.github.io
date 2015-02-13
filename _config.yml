@@ -6,5 +6,6 @@ description: xp's idea
 
 author:  'drdr.xp'
 url:     'http://drmingdrmer.github.io'
+baseurl: '/'
 email:   'drdr.xp@gmail.com'
 aboutme: 'Software Engineer at Sina'
