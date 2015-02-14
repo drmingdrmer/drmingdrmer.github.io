@@ -1,5 +1,5 @@
 name: drdr.xp Blog
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 paginate: 3
 description: xp's idea
