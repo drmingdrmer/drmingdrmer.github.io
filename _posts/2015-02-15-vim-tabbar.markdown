@@ -12,6 +12,10 @@ tags: vim tab plugin
         ></iframe>
 Simple, stupid and fast tab-bar for VIM.
 
+![](/img/vim-tabbar/screenshot.png)
+
+<!--more-->
+
 Names of opened buffer are shortened and shows on the top row of window.
 
 Tab button uses one of these three highlight for different states:
@@ -19,8 +23,6 @@ Tab button uses one of these three highlight for different states:
 -   `TabLineFill`: inactive buffer(**grey text on cyan background**).
 -   `TabLine`: in one of the windows but not focused(**white text on dark cyan background**).
 -   `TabLineSel`: currently focused buffer(**black text on white background**).
-
-![](/img/vim-tabbar/screenshot.png)
 
 ##  Installation
 

@@ -37,6 +37,7 @@ jobq.run( ( 0, 1, 2 ), [ add1, multi2, printarg ] )
 # > 6
 {% endhighlight %}
 
+<!--more-->
 
 Specifing number of threads for each job:
 
