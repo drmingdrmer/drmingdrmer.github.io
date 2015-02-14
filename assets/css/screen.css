@@ -112,12 +112,12 @@ h1, h2, h3,
 h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
-    margin-top: 80px;
+    margin: 4.0rem 0;
     font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 1.2em;
     letter-spacing: -2px;
     text-indent: -3px;
@@ -135,7 +135,7 @@ h3 {
 }
 
 h4 {
-    font-size: 3rem;
+    font-size: 2.1rem;
 }
 
 h5 {
@@ -162,7 +162,10 @@ h4 a, h5 a, h6 a {
 
 
 p, ul, ol, dl {
-    margin: 1.6em 0;
+    margin: 12px 0;
+    font-size: 16px;
+    line-height: 180%;
+    color: #555;
 }
 
 ol ol, ul ul,
@@ -779,6 +782,11 @@ margin on the iframe, cause it breaks stuff. */
     top: -33px;
 }
 
+.MathJax {
+    color: #000;
+}
+
+
 
 /* ==========================================================================
    9. Media Queries - Smaller than 900px
@@ -823,20 +831,21 @@ margin on the iframe, cause it breaks stuff. */
     }
 
     h1 {
-        font-size: 4.8rem;
+        font-size: 4.0rem;
         text-indent: -2px;
     }
 
     h2 {
-        font-size: 3.8rem;
+        font-size: 3.0rem;
     }
 
     h3 {
-        font-size: 3.3rem;
+        font-size: 2.4rem;
     }
 
     h4 {
-        font-size: 2.8rem;
+        font-size: 2.0rem;
+        margin: 4.0rem 0;
     }
 
 }
