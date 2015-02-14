@@ -11,3 +11,5 @@ tags: python engineering git
 [A Note About Git Commit Messages](/res/pages/A_Note_About_Git_Commit_Messages.html)
 
 [Google's Python Class](https://developers.google.com/edu/python/)
+
+<!--more-->

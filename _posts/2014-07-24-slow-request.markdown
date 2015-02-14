@@ -6,17 +6,13 @@ categories: math engineering
 tags: slow probabilistic
 ---
 
-<!--
-Here is an example MathJax inline rendering \\( 1/x^{2} \\)
-And here is a block rendering:
-\\[ \frac{1}{n^{2}} \\]
--->
-
 1个客户端同时向服务器发出100个请求，等待所有的请求都返回才算成功。  
 99%的请求10ms返回，1%的请求1000ms返回.
 
 假设慢请求的概率是 $$ p = 0.01 $$ ，请求总数是 $$ n = 100 $$.
 能快速(10ms)返回的概率有多少？如何优化?
+
+<!--more-->
 
 #### 所有请求都能在10ms内返回的概率只有 36%：
 
@@ -43,3 +39,10 @@ And here is a block rendering:
 | 1        | 10ms     | 36%    |
 | 2        | 20ms     | 99.00% |
 | 3        | 30ms     | 99.99% |
+
+<!--
+Here is an example MathJax inline rendering \\( 1/x^{2} \\)
+And here is a block rendering:
+\\[ \frac{1}{n^{2}} \\]
+-->
+
