@@ -112,38 +112,38 @@ h1, h2, h3,
 h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
-    margin: 6.0rem 0 4.0rem;
+    margin: 4.0rem 0 4.0rem;
     font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.0rem;
     line-height: 1.2em;
     letter-spacing: -2px;
     text-indent: -3px;
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 2.6rem;
     line-height: 1.2em;
     letter-spacing: -1px;
     text-indent: -2px;
 }
 
 h3 {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
 }
 
 h4 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
 }
 
 h5 {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
 }
 
 h6 {
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 a {
@@ -162,7 +162,7 @@ h4 a, h5 a, h6 a {
 
 
 p, ul, ol, dl {
-    margin: 12px 0;
+    margin: 24px 0;
     font-size: 1.8rem;
     line-height: 140%;
     color: #555;
@@ -545,6 +545,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 /* Keep large images within the bounds of the post-width */
+.post-excerpt img,
 .post-content img {
     display: block;
     max-width: 100%;
@@ -833,7 +834,7 @@ margin on the iframe, cause it breaks stuff. */
     }
 
     h1 {
-        font-size: 4.0rem;
+        font-size: 3.0rem;
         text-indent: -2px;
     }
 
