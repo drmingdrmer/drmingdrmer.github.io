@@ -610,11 +610,13 @@ margin on the iframe, cause it breaks stuff. */
 .gist table {
     margin: 0;
     font-size: 1.4rem;
+    line-height: 2.0rem;
 }
 
 .gist .line-number {
     min-width: 25px;
     font-size: 1.1rem;
+    line-height: 2.0rem;
 }
 
 
