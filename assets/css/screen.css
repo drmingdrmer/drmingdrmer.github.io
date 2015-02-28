@@ -287,7 +287,7 @@ table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 5.0rem auto;
-    width: auto;
+    width: 100%;
     max-width: 100%;
     background-color: transparent;
 }
