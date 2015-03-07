@@ -17,9 +17,9 @@ If `n` $$ \approx $$ `b`, the hash table would look like this:
 
 *   **37%** buckets are empty.
 *   **37%** buckets contain 1 key.
-*   **26%** buckets contain more than 1 keys, which means, collision occurs.
+*   **26%** buckets contain more than 1 key, which means collision occurs.
 
-Following chart created by program simulation shows distribution of 20 keys
+The following chart created by program simulation shows distribution of 20 keys
 over 20 buckets.
 
 ![](/img/hash/dist-1-with-label.png)
@@ -29,16 +29,16 @@ over 20 buckets.
 
 ### Load Factor and Key Distribution
 
-Let `load factor` $$ \alpha $$ to be: $$ \alpha = \frac{n}{b} $$.
-`load factor` defines almost everything of a hash table.
+Let `load factor` $$ \alpha $$ be: $$ \alpha = \frac{n}{b} $$.
+`load factor` defines almost everything in a hash table.
 
 
 ### Load Factor `<0.75`
 
-Normally in-memory hash table implementation keeps `load factor` lower than
+Normally in-memory hash table implementations keep `load factor` lower than
 **0.75**.
 This makes collision rate relatively low, thus looking up is very fast.
-The lower collision rate is, the less time it takes on resolving collision,
+The lower the collision rate is, the less the time it takes to resolve collision,
 since [linear-probing] is normally used and it is very sensitive to collision
 rate.
 
@@ -49,9 +49,11 @@ As we can see from the first chart, when `load factor` is small, key
 distribution is very uneven. What we need to know is how `load factor` affects
 key distribution.
 
-Increasing `load factor` would reduce empty buckets and increase collision
-rate.  The change is monotonic but not linear, as the table and picture shows
-below:
+Increasing `load factor` would reduce number of empty buckets and increase
+collision rate. The change is monotonic but not linear, as the table and
+the picture shows below:
+
+#### Load factor, empty buckets, buckets having 1 key and buckets having more than 1 key:
 
 | load factor(n/b) |   0 |   1 |   >1 |
 | :--         | --: | --: |  --: |
@@ -62,25 +64,26 @@ below:
 | 5.0         | 01% | 03% |  96% |
 | 10.0        | 00% | 00% | 100% |
 
+
 ![](/img/hash/load-factor-empty-collision.png)
 
 > **0.75** has been chosen as upper limit of `load factor` not only because
-> of concern of collision rate, but also because of the way [linear-probing]
-> works. That is a little bit out of this article.
+> of concerns of collision rate, but also because of the way [linear-probing]
+> works. But that is ultimately irrelevant.
 
 
 ### Tips
 
--   It is **impossible** to use hash table with low space overload and at the
+-   It is **impossible** to use hash tables with low space overload and at the
     same time, with low collision rate.
-    -   Counter intuitive is that just-enough buckets wastes **37%** space.
+    -   The truth is that just enough buckets waste **37%** space.
 
--   Use hash table only for (in memory) small data set.
+-   Use hash tables only for (in memory) small data sets.
 
--   High level language like Java or Python has builtin hash table that keeps
+-   High level languages like Java and Python have builtin hash tables that keep
     `load factor` below **0.75**.
 
--   Hash table does **NOT** uniformly distribute small set of keys over all
+-   Hash tables do **NOT** uniformly distribute small sets of keys over all
     buckets.
 
 
@@ -97,7 +100,7 @@ For very large `load factor` [tree] or similar data structure should be consider
 
 ### Load Factor `>10.0`
 
-When `load factor` gets very large, the probability that a bucket is empty
+When `load factor` becomes very large, the probability that a bucket is empty
 converges to 0. And the key distribution converges to the average.
 
 
@@ -108,7 +111,7 @@ Let the average number of keys in each bucket be:
 $$ {avg} = \frac{n}{b} $$
 
 `100%` means a bucket contains exactly $$ {avg} $$ keys.
-Following charts show what distribution is like when `load factor` is **10**,
+The following charts show what distribution is like when `load factor` is **10**,
 **100** and **1000**:
 
 ![](/img/hash/dist-10.png)
@@ -116,10 +119,10 @@ Following charts show what distribution is like when `load factor` is **10**,
 ![](/img/hash/dist-1000.png)
 
 
-As `load factor` gets higher, the difference between the most keys bucket and
-the least keys bucket get lower.
+As `load factor` becomes higher, the difference between the bucket with most keys and
+the bucket with fewest keys becomes lower.
 
-| load factor | (most-least)/most | least |
+| load factor | (most-fewest)/most | fewest |
 | --:     | --:    | --:   |
 | 1       | 100.0% | 0     |
 | 10      | 88.0%  | 2     |
@@ -131,8 +134,10 @@ the least keys bucket get lower.
 
 ### Calculation
 
-Most of numbers from above are from program simulation.
-From this chapter we are going to learn more about distribution statistics in math.
+Most of numbers from above are from program simulations.
+From this chapter we are going to see what distribution is in math.
+
+#### Probability of each kind of buckets:
 
 *   `0` key: $$ b e^{-\frac{n}{b}} $$
 *   `1` key: $$ n e^{ - \frac{n}{b} } $$
@@ -140,9 +145,9 @@ From this chapter we are going to learn more about distribution statistics in ma
 
 ### Number of Empty Buckets
 
-The chance a key **NOT** in a bucket is: $$ \frac{b-1}{b} $$.
+The chance a key is **NOT** in a bucket is: $$ \frac{b-1}{b} $$.
 Since: $$ \lim_{b\to \infty} (1+\frac{1}{b})^b = e $$.
-the probability of a bucket being empty is:
+The probability of a bucket being empty is:
 
 $$
 (\frac{b-1}{b})^n = ((1- \frac{1}b)^b)^{\frac{n}{b}} = e^{-\frac{n}{b}}
@@ -157,7 +162,7 @@ $$ b e^{-\frac{n}{b}} $$
 The probability of a bucket having exactly 1 key is:
 
 $$
-{n \choose 1} ( 1 - \frac{1}{b} )^{n-1} ( \frac{1}{b} )^1 = \frac{n}{b} e^{-\frac{n}{b}}
+{n \choose 1} ( \frac{1}{b} )^1 ( 1 - \frac{1}{b} )^{n-1} = \frac{n}{b} e^{-\frac{n}{b}}
 $$
 
 > One of the `n` keys is in this bucket, and at the same time, no other key
@@ -175,24 +180,24 @@ $$ b - b e^{-\frac{n}{b}} - n e^{ - \frac{n}{b} } $$
 
 ### Distribution Uniformity
 
-Similarly, probability of a bucket having exactly `x` keys is:
+Similarly, probability of a bucket having exactly `i` keys is:
 
 $$
-p(i) = {n \choose x} ( \frac{1}{b} )^{ i } ( 1 - \frac{1}{b} )^{n-i}
+p(i) = {n \choose i} ( \frac{1}{b} )^{ i } ( 1 - \frac{1}{b} )^{n-i}
 $$
 
 The probability distribution is [binomial-distribution].
 
-And we want to know how many keys there are in the bucket that has least keys
-and the bucket that has most keys.
+And we want to know how many keys there are in the bucket that has the fewest keys
+and the bucket that has the most keys.
 
 
 ### Approximation by Normal Distribution
 
-When `n` and `b` is large, binomial distribution can be approximated by
+When `n` and `b` are large, binomial distribution can be approximated by
 [normal-distribution] for uniformity estimation.
 
-Let $$ p = \frac{1}{b} $$. The probability of a bucket that has exactly `x`
+Let $$ p = \frac{1}{b} $$. The probability of a bucket that has exactly `i`
 keys is:
 
 $$
@@ -215,14 +220,14 @@ $$
 P(x) = \sum_{i=0}^x p(i)
 $$
 
-Thus in this hash table, the total number of buckets those have less than `x` keys is:
+Thus in this hash table, the total number of buckets that has less than `x` keys is:
 
 $$
 b \cdot P(x) = b \cdot \sum_{i=0}^x p(i)
 $$
 
 Choose `x` so that the total number of such buckets is `1`. Then this only
-bucket must be the one that has least keys. So find `x` that satisfies:
+bucket must be the one that has the fewest keys. So find `x` that satisfies:
 
 $$
 b \cdot \sum_{i=0}^x p(i) = 1
@@ -249,7 +254,7 @@ $$
 Now what we need to do is to find `x` in order to find
 $$ N_{max} $$ and $$ \ N_{min} $$.
 
-Probability of a bucket that contains less than `x` keys is:
+The probability of a bucket that contains less than `x` keys is:
 
 $$
 \sum_{i=0}^x p(i)
@@ -270,11 +275,11 @@ By iterating `x` backward from `u` to `0`, we can find the solution to
 
 $$ b \cdot \Phi(\frac{x-\mu}\sigma) = 1 $$
 
-Then use this `x` we can find $$ N_{min} $$ and $$ N_{max} $$.
+Using this `x` we can find $$ N_{min} $$ and $$ N_{max} $$.
 
 ### Simulations in Python
 
-Several simulation programs used in this post is here:
+Several simulation programs used in this post are here:
 [hash-simulation](https://gist.github.com/drmingdrmer/f94b945cf7d5f287eb78)
 
 
