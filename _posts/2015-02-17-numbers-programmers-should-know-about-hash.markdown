@@ -11,7 +11,7 @@ There is a hash table:
 *   It has `b` buckets.
 *   It has `n` keys stored in it.
 *   We assume that the hash function distributes keys uniformly.
-*   A bucket is able to contain more than one key.
+*   A bucket can contain more than 1 keys.
 
 If `n` $$ \approx $$ `b`, the hash table would look like this:
 
@@ -49,11 +49,11 @@ As we can see from the first chart, when `load factor` is small, key
 distribution is very uneven. What we need to know is how `load factor` affects
 key distribution.
 
-Increasing `load factor` would reduce number of empty buckets and increase
-collision rate. The change is monotonic but not linear, as the table and
-the picture shows below:
+Increasing `load factor` would reduce the number of empty buckets and increase
+the collision rate. It is monotonic but not linear, as the following table and
+the picture shows:
 
-#### Load factor, empty buckets, buckets having 1 key and buckets having more than 1 key:
+#### Load factor, empty buckets, buckets having 1 key and buckets having more than 1 keys:
 
 | load factor(n/b) |   0 |   1 |   >1 |
 | :--         | --: | --: |  --: |
@@ -119,8 +119,8 @@ The following charts show what distribution is like when `load factor` is **10**
 ![](/img/hash/dist-1000.png)
 
 
-As `load factor` becomes higher, the difference between the bucket with most keys and
-the bucket with fewest keys becomes lower.
+As `load factor` becomes higher, the gap between the most keys and the fewest
+keys becomes smaller.
 
 | load factor | (most-fewest)/most | fewest |
 | --:     | --:    | --:   |
@@ -134,10 +134,10 @@ the bucket with fewest keys becomes lower.
 
 ### Calculation
 
-Most of numbers from above are from program simulations.
-From this chapter we are going to see what distribution is in math.
+Most of the numbers from above are produced by program simulations.
+From this chapter we are going to see what the distribution is in math.
 
-#### Probability of each kind of buckets:
+#### Expected number of each kind of buckets:
 
 *   `0` key: $$ b e^{-\frac{n}{b}} $$
 *   `1` key: $$ n e^{ - \frac{n}{b} } $$
@@ -145,15 +145,16 @@ From this chapter we are going to see what distribution is in math.
 
 ### Number of Empty Buckets
 
-The chance a key is **NOT** in a bucket is: $$ \frac{b-1}{b} $$.
+The chance a certain key is **NOT** in a certain bucket is:
+$$ \frac{b-1}{b} $$.
 Since: $$ \lim_{b\to \infty} (1+\frac{1}{b})^b = e $$.
-The probability of a bucket being empty is:
+The probability of a certain bucket being empty is:
 
 $$
 (\frac{b-1}{b})^n = ((1- \frac{1}b)^b)^{\frac{n}{b}} = e^{-\frac{n}{b}}
 $$
 
-Thus the number of empty buckets is:
+Thus the total number of empty buckets is:
 
 $$ b e^{-\frac{n}{b}} $$
 
@@ -168,7 +169,7 @@ $$
 > One of the `n` keys is in this bucket, and at the same time, no other key
 > is in this bucket:
 
-The number of buckets having exactly 1 key is:
+The the number of buckets having exactly 1 key is:
 
 $$ b\frac{n}{b} e^{-\frac{n}{b}} = n e^{ - \frac{n}{b} } $$
 
@@ -180,7 +181,7 @@ $$ b - b e^{-\frac{n}{b}} - n e^{ - \frac{n}{b} } $$
 
 ### Distribution Uniformity
 
-Similarly, probability of a bucket having exactly `i` keys is:
+Similarly, the probability of a bucket having exactly `i` keys is:
 
 $$
 p(i) = {n \choose i} ( \frac{1}{b} )^{ i } ( 1 - \frac{1}{b} )^{n-i}
@@ -188,23 +189,24 @@ $$
 
 The probability distribution is [binomial-distribution].
 
-And we want to know how many keys there are in the bucket that has the fewest keys
-and the bucket that has the most keys.
+And we want to know how many keys there are in the bucket having the fewest keys
+and in the bucket having the most keys.
 
 
 ### Approximation by Normal Distribution
 
-When `n` and `b` are large, binomial distribution can be approximated by
-[normal-distribution] for uniformity estimation.
+When `n` and `b` are large, [binomial-distribution] can be approximated by
+[normal-distribution] to estimate uniformity.
 
-Let $$ p = \frac{1}{b} $$. The probability of a bucket that has exactly `i`
+Let $$ p = \frac{1}{b} $$. The probability of a bucket having exactly `i`
 keys is:
 
 $$
 p(i) = {n \choose i}p^i(1-p)^{n-i}
 \approx \frac{1}
              {\sigma \sqrt{2 \pi} }
-        e^{ - \frac{(i-\mu)^2}{2 \sigma^2} }
+        e^{ - \frac{(i-\mu)^2}
+                   {2 \sigma^2} }
 $$
 
 Where:
@@ -220,7 +222,7 @@ $$
 P(x) = \sum_{i=0}^x p(i)
 $$
 
-Thus in this hash table, the total number of buckets that has less than `x` keys is:
+Thus in this hash table, the total number of buckets having less than `x` keys is:
 
 $$
 b \cdot P(x) = b \cdot \sum_{i=0}^x p(i)
@@ -248,6 +250,7 @@ Since normal distribution is symmetric:
 $$
 N_{max} + N_{min} = 2 \mu = 2 \frac{n}{b}
 $$
+
 
 ### Find `x`
 
