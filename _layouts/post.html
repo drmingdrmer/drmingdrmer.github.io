@@ -8,15 +8,25 @@ archive: false
 
     <article class="post">
         <header class="post-header">
-            <a id="blog-logo" href="{{site.baseurl}}">
-                {% if site.logo %}
+            <span class="blog-logo">
+                <a href="{{site.baseurl}}">
+                    {% if site.logo %}
                     <img src="{{site.logo}}" alt="{{ site.name }}" />
-                {% else %}
-                    <span class="blog-title">{{ site.name }}</span>
-                {%endif%} 
-            </a>
+                    {% else %}
+                    <span class="blog-title">Home</span>{%endif%}</a>
+            </span>
+            <span class="secondary">
+                <span class="light-text">
+                    of {{ site.name }}
+                </span>
+            </span>
+
+            <span class="secondary float-right">
+                <a href="http://weibo.com/drdrxp">drdrxp</a>
+                <span class="light-text">@weibo.com</span>
+            </span>
         </header>
-        
+
         <span class="post-meta">
         	<time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
         	{% if page.categories %}
@@ -28,6 +38,12 @@ archive: false
        	</span>
 
         <h1 class="post-title">{{ page.title }}</h1>
+
+        <span style="float:right;">
+            <iframe style="margin:0;" width="86" height="16" scrolling="no" frameborder="0"
+                src="http://hits.sinajs.cn/A1/weiboshare.html?url={{ site.url }}{{ page.url }}&amp;type=6&amp;{% if site.weibo_uid %}ralateUid={{ site.weibo_uid }}&amp;{% endif %}title=xp最近才发现的：{{page.title}}&amp;language=zh_cn" allowtransparency="true">
+            </iframe>
+        </span>
 
         <section class="post-content">
             {{content}}
@@ -63,7 +79,7 @@ archive: false
                 </a>
                 <span>
                     <iframe style="margin:0;" width="86" height="16" scrolling="no" frameborder="0"
-                        src="http://hits.sinajs.cn/A1/weiboshare.html?url={{ site.url }}{{ page.url }}&amp;type=6&amp;{% if site.weibo_uid %}ralateUid={{ site.weibo_uid }}&amp;{% endif %}language=zh_cn" allowtransparency="true">
+                        src="http://hits.sinajs.cn/A1/weiboshare.html?url={{ site.url }}{{ page.url }}&amp;type=6&amp;{% if site.weibo_uid %}ralateUid={{ site.weibo_uid }}&amp;{% endif %}title=xp最近才发现的：{{page.title}}&amp;language=zh_cn" allowtransparency="true">
                     </iframe>
                 </span>
             </section>

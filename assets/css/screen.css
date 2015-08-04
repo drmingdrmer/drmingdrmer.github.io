@@ -119,14 +119,12 @@ h4, h5, h6 {
 h1 {
     font-size: 3.0rem;
     line-height: 1.2em;
-    letter-spacing: -2px;
     text-indent: -3px;
 }
 
 h2 {
     font-size: 2.6rem;
     line-height: 1.2em;
-    letter-spacing: -1px;
     text-indent: -2px;
 }
 
@@ -363,6 +361,14 @@ margin on the iframe, cause it breaks stuff. */
     vertical-align: middle;
 }
 
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
 
 /* ==========================================================================
    4. General - The main styles for the the theme
@@ -398,7 +404,6 @@ margin on the iframe, cause it breaks stuff. */
 .blog-title {
     margin: 10px 0 10px 0;
     font-size: 5rem;
-    letter-spacing: -1px;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
 }
@@ -409,7 +414,6 @@ margin on the iframe, cause it breaks stuff. */
     line-height: 1.5em;
     font-weight: 300;
     font-family: 'Noto Serif', serif;
-    letter-spacing: 0;
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -538,10 +542,23 @@ margin on the iframe, cause it breaks stuff. */
     padding: 60px 0;
     text-align: center;
 }
-
 .post-template .blog-title {
     display: inline-block;
     padding: 2.5rem 0;
+}
+
+.post-header {
+    border-bottom: 1px solid #ddd;
+}
+
+.secondary {
+    font-size: 1.4rem;
+}
+.secondary a {
+    text-decoration: none;
+}
+.secondary .light-text {
+    color: #aaa;
 }
 
 /* Keep large images within the bounds of the post-width */
@@ -814,7 +831,6 @@ margin on the iframe, cause it breaks stuff. */
 
     .blog-title {
         font-size: 4rem;
-        letter-spacing: -1px;
     }
 
     .blog-description {
@@ -897,7 +913,6 @@ margin on the iframe, cause it breaks stuff. */
     h1, h2 {
         font-size: 3rem;
         line-height: 1.1em;
-        letter-spacing: -1px;
     }
 
     h3 {
