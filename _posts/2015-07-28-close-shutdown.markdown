@@ -172,24 +172,152 @@ Time
 因为nonblocking所以没有线程阻塞,
 上面提到的行为差别不会体现出来 。
 
+<strike>
 当时注意到这个问题是在做1个go的server，因为在go的实现中，
 一个tcp的accept的底层实现里，对accept()的系统调用还是阻塞的。
 
 当另1个goroutine想要退出整个进程的时候，需要通知accept的goroutine先退出。
 
-最初我使用`func (*TCPConn) Close`来关闭监听的socket,
-但发现TCPConn:Close实际调用了系统调用close(),
+最初我使用`func (*TCPListener) Close`来关闭监听的socket,
+但发现TCPListener:Close实际调用了系统调用close(),
 无法唤醒当前正在accept()的goroutine,
 必须等到有下一个连接进来才能唤醒accept()，
 进而退出整个进程。
 
 所以后来改成使用shutdown()来关闭sock_fd，以达到唤醒accept()的goroutine的目的。
+</strike>
+
+---
+
+##### 更新 2015 Aug 05 - go中不能唤醒的问题和重现方法
+
+(开始写的时候没有记清楚重现步骤，感谢 [foxmailed][foxmailed] 提醒。)
+
+上面的描述不准确，更新一下,
+实际上是2个问题在1起引起的`TCPListener.Close`无法唤醒Accept的goroutine:
+
+-   go里的socket本来应该都是nonblocking的。
+
+    go内部accept的系统调用在没有连接时返回-1，
+    然后进入事件的等待(epoll_wait等)。
+
+-   `TCPListener.Close` 本身是有的唤醒机制的。
+
+    但和系统调用shutdown()的唤醒不一样，
+    shutdown是线程调度层面的，
+    `TCPListener.Close`是网络事件层和goroutine层面。
+
+    `TCPListener.Close`实际上是把`TCPListener.Accept`的goroutine唤醒。
+    但如果它陷入到系统调用accept()并阻塞在那里了，
+    要唤醒就需要先把它从系统调用中唤醒(例如用shutdown,TCPListener.Close 没有这个步骤)。
+
+    所以`TCPListener.Close`的唤醒机制前提是nonblocking。
+
+-   但go里面有1个问题，就是它的dup()实现时，
+    每次dup之后还会顺手把fd设置为blocking模式:
+
+    `net/fd_unix.go`里的实现, 看注释里地描述:
+
+    ```
+    func (fd *netFD) dup() (f *os.File, err error) {
+            ns, err := dupCloseOnExec(fd.sysfd)
+            if err != nil {
+                    syscall.ForkLock.RUnlock()
+                    return nil, &OpError{"dup", fd.net, fd.laddr, err}
+            }
+
+            // We want blocking mode for the new fd, hence the double negative.
+            // This also puts the old fd into blocking mode, meaning that
+            // I/O will block the thread instead of letting us use the epoll server.
+            // Everything will still work, just with more threads.
+            if err = syscall.SetNonblock(ns, false); err != nil {
+                    return nil, &OpError{"setnonblock", fd.net, fd.laddr, err}
+            }
+
+            return os.NewFile(uintptr(ns), fd.name()), nil
+    }
+    ```
+
+    简单说就是dup的副作用是把fd变成阻塞的，
+    但go开发者不是很屌这件事情，觉得阻塞就阻塞，无非多用几个线程而已。
+
+    可是`TCPListener.Close`的唤醒机制是必须基于nonblocking的。。。。。
+
+-   所以只要dup()被调用了1下，
+    `TCPListener.Close`就无法唤醒等待的`TCPListener.Accept`了。
+
+    哪些场合dup会被调用呢？最简单地就是从Listener里取1下File对象就好了：
+
+    ```
+    l.(*net.TCPListener).File()
+    ```
+
+    go里File方法实现：
+
+    ```
+    net/tcpsock_posix.go:
+    func (l *TCPListener) File() (f *os.File, err error) { return l.fd.dup() }
+    ```
+
+`.File()`在我们的代码里用在进程重启过程中的监听fd的继承.
+
+为了解决这个问题, 我们在代码里每次调用`.File()`后，都加上了1句修正：
+
+```
+syscall.SetNonblock( int(f.Fd()), true )
+```
+
+下面这段代码可以重现go中Close不唤醒的问题：
+
+[close-does-not-wake-up-accept.go](/snippet/close-shutdown/close-does-not-wake-up-accept.go)
+
+```
+package main
+import (
+	"log"
+	"net"
+	"runtime"
+	"time"
+)
+func main() {
+	runtime.GOMAXPROCS(2)
+	l, err := net.Listen("tcp", ":2000")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	show_bug := true
+	if show_bug {
+		// TCPListener.File() calls dup() that switches the fd to blocking
+		// mode
+		l.(*net.TCPListener).File()
+	}
+
+	go func() {
+		log.Println("listening... expect an 'closed **' error in 1 second")
+		_, e := l.Accept()
+		log.Println(e)
+	}()
+	time.Sleep(time.Second * 1)
+	l.Close()
+	time.Sleep(time.Second * 1)
+}
+```
+
+更新 2015 Aug 05 结束
+
+---
+
 
 #### 最后非常地感谢2位小伙伴，在追踪和定位这个问题时一起磕代码:DDD
 
 [林小风][林小风]
+
 [马健将][马健将]
+
+[foxmailed][foxmailed]
 
 [sock_def_wakeup]: http://lxr.free-electrons.com/source/net/core/sock.c#L2212
 [马健将]: http://weibo.com/stupid
 [林小风]: http://weibo.com/breezewoods
+[foxmailed]: http://weibo.com/foxmailed
