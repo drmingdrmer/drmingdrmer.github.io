@@ -8,15 +8,21 @@ archive: false
 
     <article class="post">
         <header class="post-header">
-            <a id="blog-logo" href="{{site.baseurl}}">
-                {% if site.logo %}
+            <span class="blog-logo">
+                <a href="{{site.baseurl}}">
+                    {% if site.logo %}
                     <img src="{{site.logo}}" alt="{{ site.name }}" />
-                {% else %}
-                    <span class="blog-title">{{ site.name }}</span>
-                {%endif%} 
-            </a>
+                    {% else %}
+                    <span class="blog-title">Home</span>
+                    {%endif%} 
+                </a>
+            </span>
+            <span class="header-link">
+                <a href="http://weibo.com/drdrxp">drdrxp</a>
+                <span class="header-grey">@weibo.com</span>
+            </span>
         </header>
-        
+
         <span class="post-meta">
         	<time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
         	{% if page.categories %}
