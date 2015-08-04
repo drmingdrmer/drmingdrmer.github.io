@@ -9,6 +9,7 @@ paginate: 20
 description: xp's idea
 
 author:  'drdr.xp'
+weibo_uid: 'drdrxp'
 url:     'http://drmingdrmer.github.io'
 baseurl: '/'
 email:   'drdr.xp@gmail.com'
