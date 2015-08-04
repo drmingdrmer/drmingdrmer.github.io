@@ -361,6 +361,14 @@ margin on the iframe, cause it breaks stuff. */
     vertical-align: middle;
 }
 
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
 
 /* ==========================================================================
    4. General - The main styles for the the theme
@@ -552,6 +560,16 @@ margin on the iframe, cause it breaks stuff. */
 }
 .post-header .header-grey {
     font-size: 1.4rem;
+    color: #aaa;
+}
+
+.secondary {
+    font-size: 1.4rem;
+}
+.secondary a {
+    text-decoration: none;
+}
+.secondary span {
     color: #aaa;
 }
 
