@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "socket关闭:close()和shutdown()的差异"
+title:  "socket关闭: close()和shutdown()的差异"
 date:   2015 Jul 28
 categories: tech programming network
 tags: socket network close shutdown c EINVAL
