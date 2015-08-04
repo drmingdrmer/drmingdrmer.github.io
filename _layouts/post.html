@@ -13,13 +13,17 @@ archive: false
                     {% if site.logo %}
                     <img src="{{site.logo}}" alt="{{ site.name }}" />
                     {% else %}
-                    <span class="blog-title">Home</span>
-                    {%endif%} 
-                </a>
+                    <span class="blog-title">Home</span>{%endif%}</a>
             </span>
-            <span class="header-link">
+            <span class="secondary">
+                <span class="light-text">
+                    of {{ site.name }}
+                </span>
+            </span>
+
+            <span class="secondary float-right">
                 <a href="http://weibo.com/drdrxp">drdrxp</a>
-                <span class="header-grey">@weibo.com</span>
+                <span class="light-text">@weibo.com</span>
             </span>
         </header>
 

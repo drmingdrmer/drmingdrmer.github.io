@@ -551,25 +551,13 @@ margin on the iframe, cause it breaks stuff. */
     border-bottom: 1px solid #ddd;
 }
 
-.post-header .header-link {
-    font-size: 1.4rem;
-    float: right;
-}
-.post-header .header-link a {
-    text-decoration: none;
-}
-.post-header .header-grey {
-    font-size: 1.4rem;
-    color: #aaa;
-}
-
 .secondary {
     font-size: 1.4rem;
 }
 .secondary a {
     text-decoration: none;
 }
-.secondary span {
+.secondary .light-text {
     color: #aaa;
 }
 
