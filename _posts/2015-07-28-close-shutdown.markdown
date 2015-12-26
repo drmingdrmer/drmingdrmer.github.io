@@ -201,6 +201,9 @@ Time
     go内部accept的系统调用在没有连接时返回-1，
     然后进入事件的等待(epoll_wait等)。
 
+    执行`TCPListener.Accept`的goroutine如果没有收到connect请求,
+    就把自己挂起来, 等待网络事件到来.
+
 -   `TCPListener.Close` 本身是有的唤醒机制的。
 
     但和系统调用shutdown()的唤醒不一样，
@@ -208,10 +211,14 @@ Time
     `TCPListener.Close`是网络事件层和goroutine层面。
 
     `TCPListener.Close`实际上是把`TCPListener.Accept`的goroutine唤醒。
-    但如果它陷入到系统调用accept()并阻塞在那里了，
+    所以正常的阻塞的`TCPListener.Accept`的goroutine在`TCPListener.Close`调用时会被唤醒.
+
+    如果监听的TCPListener内部的fd时blocking模式的,
+    它在调用系统调用accept()时, accept()不会返回-1, 而是阻塞住, 这时线程被挂起(不是goroutine挂起了).
     要唤醒就需要先把它从系统调用中唤醒(例如用shutdown,TCPListener.Close 没有这个步骤)。
 
     所以`TCPListener.Close`的唤醒机制前提是nonblocking。
+    一旦进入blocking模式并调用了accept, `TCPListener.Close`就没能力把它唤醒了.
 
 -   但go里面有1个问题，就是它的dup()实现时，
     每次dup之后还会顺手把fd设置为blocking模式:
