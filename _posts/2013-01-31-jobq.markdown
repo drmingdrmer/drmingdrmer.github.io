@@ -14,7 +14,7 @@ Check out on github: [jobq][jobq-github].
 
 Example:
 
-{% highlight python %}
+```python
 import jobq
 
 def add1( args ):
@@ -35,46 +35,46 @@ jobq.run( ( 0, 1, 2 ), [ add1, multi2, printarg ] )
 # > 2
 # > 4
 # > 6
-{% endhighlight %}
+```
 
 <!--more-->
 
 Specifing number of threads for each job:
 
-{% highlight python %}
+```python
 # Job 'multi2' uses 1 thread.
 # This is the same as the above example.
 jobq.run( range( 3 ), [ add1, (multi2, 1), printarg ] )
 # > 2
 # > 4
 # > 6
-{% endhighlight %}
+```
 
 
 Multiple threads with order kept:
 
-{% highlight python %}
+```python
 # keep_order=True to force to keep order even with concurrently running.
 jobq.run( range( 3 ), [ add1, (multi2, 2), printarg ],
           keep_order=True )
 # > 2
 # > 4
 # > 6
-{% endhighlight %}
+```
 
 
 Specifying total timeout:
 
-{% highlight python %}
+```python
 # timeout=0.5 specifies that it runs at most 0.5 second.
 jobq.run( range( 3 ), [ add1, (multi2, 2), printarg ],
           timeout=0.5 )
-{% endhighlight %}
+```
 
 
 Returning `jobq.EmptyRst` prevents `jobq` from delivering result to next job:
 
-{% highlight python %}
+```python
 def drop_even_number( i ):
     if i % 2 == 0:
         return jobq.EmptyRst
@@ -87,7 +87,7 @@ jobq.run( range( 10 ), [ drop_even_number, printarg ] )
 # > 5
 # > 7
 # > 9
-{% endhighlight %}
+```
 
 Check out on github: [jobq][jobq-github].
 
