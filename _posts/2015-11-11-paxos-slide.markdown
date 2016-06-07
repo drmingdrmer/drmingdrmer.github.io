@@ -29,6 +29,8 @@ Paxos 已经逐渐被承认是分布式系统中不可缺少的核心算法,
 
 <p><a href="/pdf/paxos-slide/paxos.pdf">Download the paxos.pdf</a></p>
 
+<p><a href="/pdf/paxos-slide/paxos.html">在线查看 html 版本 paxos.html</a></p>
+
 <!-- <object data="/pdf/paxos-slide/paxos.pdf" type="application/pdf" -->
 <!-- width="100%" height="100%"> -->
 
