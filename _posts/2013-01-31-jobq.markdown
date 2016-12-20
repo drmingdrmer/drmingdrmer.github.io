@@ -91,4 +91,4 @@ jobq.run( range( 10 ), [ drop_even_number, printarg ] )
 
 Check out on github: [jobq][jobq-github].
 
-[jobq-github]: https://github.com/drmingdrmer/jobq
+[jobq-github]: https://github.com/baishancloud/jobq
