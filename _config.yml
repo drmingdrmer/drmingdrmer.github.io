@@ -4,7 +4,7 @@ kramdown:
     input: GFM
     hard_wrap: false
 # markdown: redcarpet
-highlighter: pygments
+highlighter: rouge
 paginate: 20
 description: xp's idea
 
