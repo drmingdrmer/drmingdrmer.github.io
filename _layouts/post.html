@@ -1,7 +1,5 @@
 ---
 layout: default
-disqus: true
-archive: false
 ---
 
 <main class="content" role="main">
@@ -28,14 +26,14 @@ archive: false
         </header>
 
         <span class="post-meta">
-        	<time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-        	{% if page.categories %}
-        		on
-	        	{% for category in page.categories %}
-	        	    {{category}}
-	        	{% endfor %}
-	        {% endif %}
-       	</span>
+            <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+            {% if page.categories %}
+                on
+                {% for category in page.categories %}
+                    {{category}}
+                {% endfor %}
+            {% endif %}
+        </span>
 
         <h1 class="post-title">{{ page.title }}</h1>
 
@@ -49,7 +47,6 @@ archive: false
             {{content}}
         </section>
 
-        {% if page.archive %}
         <section class="archive">
         	<h5>Archive</h5>
     		<ul>
@@ -58,7 +55,6 @@ archive: false
     			{% endfor %}	
     		</ul>
         </section>
-        {% endif %}
 
         <footer class="post-footer">
             {% include site-author.html %}
@@ -84,7 +80,6 @@ archive: false
                 </span>
             </section>
 
-            {% if page.disqus %}
             <section class="disqus">
             	<div id="disqus_thread"></div>
             	<script type="text/javascript">
@@ -99,8 +94,7 @@ archive: false
             	<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             	<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
             </section>
-            {% endif %}
-        	
+
         </footer>
 
     </article>

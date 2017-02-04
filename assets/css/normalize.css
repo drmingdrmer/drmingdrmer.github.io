@@ -134,7 +134,8 @@ abbr[title] {
 
 b,
 strong {
-    font-weight: bold;
+    font-weight: bolder;
+    color: #000;
 }
 
 /**
@@ -403,4 +404,6 @@ textarea {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    border: 1px solid #ddd;
+    font-size: 1.5rem;
 }

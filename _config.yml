@@ -1,19 +1,20 @@
-name: drdr.xp Blog
+name:     drdr.xp Blog
 markdown: kramdown
+# markdown: redcarpet
 kramdown:
     input: GFM
     hard_wrap: false
-# markdown: redcarpet
 highlighter: rouge
-paginate: 20
+paginate:    20
 description: xp's idea
 
-author:  'drdr.xp'
+author:    'drdr.xp'
 weibo_uid: 'drdrxp'
-url:     'http://drmingdrmer.github.io'
-baseurl: '/'
-email:   'drdr.xp@gmail.com'
-aboutme: 'Software Engineer at Sina'
+url:       'http://drmingdrmer.github.io'
+baseurl:   '/'
+email:     'drdr.xp@gmail.com'
+aboutme:   'VP of Engineering at Baishancloud.com'
 
 gems:
-    - jemoji
+    - jekyll-paginate
+    # - jemoji

@@ -10,12 +10,6 @@ body {font-size: 1.9rem;}
 /* The font is too large in the post view. Revert to small size*/
 .post-header .blog-title {font-size:inherit;}
 
-/* Reduce font size and add line-height*/
-pre{
-	font-size: 0.75em;  
-	line-height: 1.4em;
-}
-
 /* Author styling */
 .author {margin-bottom:1em;}
 .author header{
