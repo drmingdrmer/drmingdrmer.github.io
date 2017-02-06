@@ -120,6 +120,7 @@ h1 {
     font-size: 3.0rem;
     line-height: 1.2em;
     text-indent: -3px;
+    border-bottom: 1px solid #ccc;
 }
 
 h2 {
