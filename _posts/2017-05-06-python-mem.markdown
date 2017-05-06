@@ -322,7 +322,7 @@ guppy 可以用来打印出各种对象各占用多少空间,
 
 ```python
 # pip install guppy
-from guppy import hpy;
+from guppy import hpy
 h = hpy()
 
 h.heap()
