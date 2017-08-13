@@ -3,6 +3,7 @@
 
 import sys
 import math
+import time
 import hashlib
 
 def normal_pdf(x, mu, sigma):
@@ -68,12 +69,13 @@ def difference(nbucket, nkey):
 
 def difference_simulation(nbucket, nkey):
 
+    t = str(time.time())
     nbucket, nkey= int(nbucket), int(nkey)
 
     buckets = [0] * nbucket
 
     for i in range(nkey):
-        hsh = hashlib.sha1(str(i)).digest()
+        hsh = hashlib.sha1(t + str(i)).digest()
         buckets[hash(hsh) % nbucket] += 1
 
     buckets.sort()
@@ -82,6 +84,24 @@ def difference_simulation(nbucket, nkey):
     return nmin, float(mmax - nmin) / mmax
 
 if __name__ == "__main__":
+
+    bks = range(2, 7)
+    print '| <sub>b</sub>\<sup>n</sup>',
+    for bk in bks:
+        print ' | 10^' + str(bk),
+    print
+
+    for b in (100, 1000, 10000):
+        print '|', b,
+        for bk in bks:
+            bk = 10**bk
+            r = difference(b, b*bk)[1]
+            r = ' | {r:.1%}'.format(r=r)
+            print r,
+        print ' |'
+
+    raise
+
 
     nbucket, nkey= sys.argv[1:]
 
