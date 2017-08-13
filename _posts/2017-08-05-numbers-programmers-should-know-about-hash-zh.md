@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "程序员必读: 关于hash表"
+title:  "程序员必读: 摸清hash表的脾性"
 date:   2017 Aug 05
 categories: math hash
 tags: hash collision math zh
