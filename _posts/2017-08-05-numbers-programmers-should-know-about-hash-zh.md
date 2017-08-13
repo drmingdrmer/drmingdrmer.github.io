@@ -9,12 +9,11 @@ tags: hash collision math zh
 <!-- mdtoc start -->
 
 - [hash表中key的分布规律]({{page.url}}#hash表中key的分布规律)
-    - [当hash表中key和bucket数量一样时(`n/b==1`):]({{page.url}}#当hash表中key和bucket数量一样时-n-b1-)
+    - [当hash表中key和bucket数量一样时(`n/b=1`):]({{page.url}}#当hash表中key和bucket数量一样时-n-b1-)
     - [key的数量对3类bucket数量的影响]({{page.url}}#key的数量对3类bucket数量的影响)
     - [key的数量对bucket的均匀程度的影响]({{page.url}}#key的数量对bucket的均匀程度的影响)
-- [Load Factor (n/b)]({{page.url}}#load-factor-n-b)
-    - [`n/b<0.75`]({{page.url}}#-n-b-075-)
-- [`n/b` 很大的hash]({{page.url}}#-n-b--很大的hash)
+- [Load Factor: `n/b<0.75`]({{page.url}}#load-factor--n-b-075-)
+- [Load Factor: `n/b>1`]({{page.url}}#load-factor--n-b-1-)
     - [`n/b` 越大, key的分布越均匀.]({{page.url}}#-n-b--越大-key的分布越均匀)
 - [计算]({{page.url}}#计算)
     - [每类bucket的数量]({{page.url}}#每类bucket的数量)
@@ -42,7 +41,7 @@ tags: hash collision math zh
 
 <a class="md-anchor" name="当hash表中key和bucket数量一样时-n-b1-"></a>
 
-## 当hash表中key和bucket数量一样时(`n/b==1`):
+## 当hash表中key和bucket数量一样时(`n/b=1`):
 
 *   **37%** 的桶是空的.
 *   **37%** 的桶里只有1个key.
@@ -91,7 +90,8 @@ tags: hash collision math zh
 空bucket几乎肯定是0, 1个key的bucket也几乎是0,
 绝大多数bucket是含有多个key的.
 
-**这时, 我们主要观察是对象bucket里key的数量的分布规律**.
+当`n/b`超过1的时候(1个bucket允许存储多个key),
+**我们主要观察的对象就转变成bucket里key的数量的分布规律**.
 
 下面这个表表示`n/b`比较大的时候, 每个bucket的key的数量趋于均匀的时候,
 **不均匀**的程度是多少.
@@ -99,7 +99,7 @@ tags: hash collision math zh
 为了描述这种不均匀的程度,
 我们使用bucket中key的个数的最大值和最小值之间的比例(`(most-fewest)/most`)来表示.
 
-下面这个表格列出了`b==100`时, 随着`n`的增大, key的分布越来越趋于平均的趋势.
+下面这个表格列出了`b=100`时, 随着`n`的增大, key的分布越来越趋于平均的趋势.
 
 | n/b: (bucket平均key的数量) | 最少key的bucket的key的数量 | 最大差异(most-fewest)/most |
 |                   --:      |                 --:        |                --:         |
@@ -124,17 +124,13 @@ bucket的不均匀程度也逐渐降低.
 > 因为在软件开发过程中, 更多的时候要考虑最坏情况, 来准备所需的内存等资源.
 
 
-<a class="md-anchor" name="load-factor-n-b"></a>
 
-# Load Factor (n/b)
+<a class="md-anchor" name="load-factor--n-b-075-"></a>
+
+# Load Factor: `n/b<0.75`
 
 hash表中常用一个概念 `load factor` $$ \alpha = \frac{n}{b} $$.
 来描述hash表的特征.
-
-
-<a class="md-anchor" name="-n-b-075-"></a>
-
-## `n/b<0.75`
 
 通常, 基于内存存储的hash表, 它的 n/b `<=` **0.75**.
 这样的设定, 既可以不浪费太多空间, 也可以保持hash表中的key的冲突相对较低,
@@ -176,9 +172,9 @@ hash表特性小贴士:
 
 
 
-<a class="md-anchor" name="-n-b--很大的hash"></a>
+<a class="md-anchor" name="load-factor--n-b-1-"></a>
 
-# `n/b` 很大的hash
+# Load Factor: `n/b>1`
 
 另外一种hash表的实现, 专门用来存储比较多的key,
 当 `n/b` 大于 `1.0`的时候, [线性探测]不再能工作(没有足够的bucket来存储每个key).
@@ -212,7 +208,7 @@ $$ {avg} = \frac{n}{b} $$
 
 我们定义一个bucket平均key的数量是`100%`: bucket中key的数量 刚好是`n/b`,
 
-下面3个图模拟了 `b==20`, `n/b`分别是 `10`, `100`, `1000`时, bucket中key的数量分布.
+下面3个图模拟了 `b=20`, `n/b`分别是 `10`, `100`, `1000`时, bucket中key的数量分布.
 
 ![](/img/hash/dist-10.png)
 ![](/img/hash/dist-100.png)
@@ -220,7 +216,7 @@ $$ {avg} = \frac{n}{b} $$
 
 
 我们看出当 `n/b` 增大时, 最多key的bucket和最少key的bucket的差距在逐渐缩小.
-下面的表里列出了随着`b` 和 `n/b`增大, key分布的均匀程度的变化:
+下面的表里列出了随着`b` 和 `n/b`增大, key分布的均匀程度((most-fewset)/most)的变化:
 
 | <sub>b</sub> \ <sup>n</sup> | 10<sup>2</sup> | 10<sup>3</sup> | 10<sup>4</sup> | 10<sup>5</sup> | 10<sup>6</sup> |
 | ----:                       | -------------: | -------------: | -------------: | -------------: | -------------: |
@@ -406,13 +402,13 @@ $$ b \cdot \Phi(\frac{x-\mu}\sigma) = 1 $$
 而这个hash表中, 不均匀的程度可以用最多key的数量和最少key的数量的差异来描述:
 因为正态分布是对称的, 所以最大key的数量可以用
 `u + (u-x)` 来表示.
-最终,
-```
-u + (u-x) - x
--------------
-u + (u-x)
-```
+最终, 最不均匀的最大bucket和最小bucket的比例就是:
 
+$$
+\frac{u+(u-x)-x}{u+(u-x)} = 1 - \frac{x}{2u-x}
+$$
+
+u是均值`n/b`.
 
 <a class="md-anchor" name="程序模拟"></a>
 
