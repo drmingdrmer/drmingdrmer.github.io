@@ -29,6 +29,8 @@ tags: hash collision math zh
 
 <!-- mdtoc end   -->
 
+<!--excerpt-->
+
 软件开发中, 一个hash表, 相当于把`n`个key随机放入到 `b` 个bucket,
 来实现使用`b`个单位的空间存储`n`个数据.
 
@@ -80,6 +82,8 @@ tags: hash collision math zh
 
 ![](/img/hash/load-factor-empty-collision.png)
 
+<!--more-->
+
 
 <a class="md-anchor" name="key的数量对bucket的均匀程度的影响"></a>
 
@@ -114,7 +118,6 @@ tags: hash collision math zh
 可以看出, 随着`n/b`每个bucket里key的平均数量的增加,
 bucket的不均匀程度也逐渐降低.
 
-<!--more-->
 
 > 和空bucket比例或1个key的bucket比例不同(只取决于`n/b`),
 > 均匀程度不仅取决于`n/b`的值,

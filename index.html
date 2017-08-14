@@ -39,7 +39,7 @@ about: 'about.html'
 
             {% if post.content contains '<!--more-->' %}
                 {{ post.content | split:'<!--more-->' | first | split:'<!--excerpt-->' | last }}
-                <p><a href="{{ post.url }}">Continue reading >>></a></p>
+                <p class="continue"><a href="{{ post.url }}">Continue Reading...</a></p>
             {% else %}
                 {{post.excerpt}}
             {% endif %}

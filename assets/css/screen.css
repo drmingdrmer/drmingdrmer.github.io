@@ -471,11 +471,6 @@ margin on the iframe, cause it breaks stuff. */
     text-decoration: none;
 }
 
-.post-excerpt p {
-    font-size: 0.9em;
-    line-height: 1.6em;
-}
-
 .post-meta {
     display: inline-block;
     margin: 0 0 5px 0;
@@ -576,6 +571,41 @@ margin on the iframe, cause it breaks stuff. */
     color: #aaa;
 }
 
+.post-excerpt p {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin: 1.3rem 0;
+}
+
+.post-excerpt h1,
+.post-excerpt h2,
+.post-excerpt h3,
+.post-excerpt h4,
+.post-excerpt h5,
+.post-excerpt h6 {
+    margin: 1rem 0 1rem;
+}
+
+.post-excerpt h1 {
+    font-size: 2rem;
+    border: none;
+}
+.post-excerpt h2 {
+    font-size: 1.8rem;
+}
+.post-excerpt h3 {
+    font-size: 1.6rem;
+}
+.post-excerpt h3 {
+    font-size: 1.4rem;
+}
+.post-excerpt h5 {
+    font-size: 1.2rem;
+}
+.post-excerpt h6 {
+    font-size: 1.0rem;
+}
+
 /* Keep large images within the bounds of the post-width */
 .post-excerpt img,
 .post-content img {
@@ -583,6 +613,16 @@ margin on the iframe, cause it breaks stuff. */
     max-width: 100%;
     margin: 0 auto;
     height: auto;
+}
+
+.post-excerpt table {
+    margin: 1rem auto;
+}
+
+.post-excerpt .continue {
+    text-align: center;
+    background: #eee;
+    padding: 0.6rem;
 }
 
 /* The author credit area after the post */
@@ -866,6 +906,10 @@ margin on the iframe, cause it breaks stuff. */
         padding: 40px 0;
     }
 
+    p {
+        font-size: 1.6rem;
+    }
+
     h1 {
         font-size: 3.0rem;
         text-indent: -2px;
@@ -924,6 +968,9 @@ margin on the iframe, cause it breaks stuff. */
         font-size: 1.5rem;
     }
 
+    p {
+        font-size: 1.6rem;
+    }
 
     h1, h2 {
         font-size: 2rem;
@@ -991,6 +1038,12 @@ margin on the iframe, cause it breaks stuff. */
     .site-footer {
         margin-top: 6rem;
         font-size: 1.1rem;
+    }
+
+
+    .post-excerpt p {
+        font-size: 1.6rem;
+        line-height: 2.0rem;
     }
 
     .MathJax,
