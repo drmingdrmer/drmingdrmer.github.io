@@ -620,9 +620,9 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-excerpt .continue {
-    text-align: center;
+    /* text-align: center; */
     background: #eee;
-    padding: 0.6rem;
+    /* padding: 0.6rem; */
 }
 
 /* The author credit area after the post */

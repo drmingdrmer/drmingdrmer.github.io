@@ -58,7 +58,10 @@ tags: hash collision math zh
 如果key随机的扔到所有的桶里,
 桶里的key的数量应该是比较均匀的, 每个桶里key的数量的期望是1.
 
-而实际上, 桶里的key的分布在n比较小的时候是非常不均匀的, 即使平均下来是1!
+
+而实际上,
+<!--more-->
+桶里的key的分布在n比较小的时候是非常不均匀的, 即使平均下来是1!
 当n增大的时候, 这种不均匀会逐渐趋于平均.
 
 
@@ -82,7 +85,6 @@ tags: hash collision math zh
 
 ![](/img/hash/load-factor-empty-collision.png)
 
-<!--more-->
 
 
 <a class="md-anchor" name="key的数量对bucket的均匀程度的影响"></a>
