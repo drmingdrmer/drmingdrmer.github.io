@@ -39,13 +39,13 @@ about: 'about.html'
 
             {% if post.content contains '<!--more-->' %}
                 {{ post.content | split:'<!--more-->' | first | split:'<!--excerpt-->' | last }}
-                <a class="continue" href="{{ post.url }}">...... continue ......</a>
                 <!-- <p class="continue"><a href="{{ post.url }}">Continue Reading...</a></p> -->
             {% else %}
                 {{post.excerpt}}
             {% endif %}
 
         </section>
+        <a class="continue" href="{{ post.url }}"> continue reading ......</a>
     </article>
 
     {% endfor %}

@@ -29,13 +29,13 @@ tags: hash collision math zh
 
 <!-- mdtoc end   -->
 
-<!--excerpt-->
 
 软件开发中, 一个hash表, 相当于把`n`个key随机放入到 `b` 个bucket,
 来实现使用`b`个单位的空间存储`n`个数据.
 
 最后key在bucket中的分布, 我们可以看到hash表的一些有趣的现象:
 
+<!--excerpt-->
 
 <a class="md-anchor" name="hash表中key的分布规律"></a>
 
@@ -54,13 +54,14 @@ tags: hash collision math zh
 
 ![](/img/hash/dist-1-with-label.png)
 
+<!--more-->
+
 和直觉不1样, 往往我们对hash表的第一感觉是:
 如果key随机的扔到所有的桶里,
 桶里的key的数量应该是比较均匀的, 每个桶里key的数量的期望是1.
 
 
 而实际上,
-<!--more-->
 桶里的key的分布在n比较小的时候是非常不均匀的, 即使平均下来是1!
 当n增大的时候, 这种不均匀会逐渐趋于平均.
 

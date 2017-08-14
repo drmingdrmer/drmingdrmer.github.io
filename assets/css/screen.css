@@ -439,7 +439,7 @@ margin on the iframe, cause it breaks stuff. */
     max-width: 700px;
     margin: 4rem auto;
     padding-bottom: 4rem;
-    border-bottom: #EBF2F6 1px solid;
+    /* border-bottom: #EBF2F6 1px solid; */
     word-break: break-word;
     hyphens: auto;
 }
@@ -468,6 +468,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-title a {
+    color: #000;
     text-decoration: none;
 }
 
@@ -558,7 +559,8 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-header {
-    border-bottom: 1px solid #ddd;
+    margin: 4rem 0;
+    /* border-bottom: 1px solid #ddd; */
 }
 
 .secondary {
@@ -571,6 +573,9 @@ margin on the iframe, cause it breaks stuff. */
     color: #aaa;
 }
 
+.post-excerpt {
+    padding: 0 2rem;
+}
 .post-excerpt p {
     font-size: 1.8rem;
     line-height: 2.6rem;
@@ -587,20 +592,20 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-excerpt h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     border: none;
 }
 .post-excerpt h2 {
-    font-size: 1.8rem;
-}
-.post-excerpt h3 {
     font-size: 1.6rem;
 }
 .post-excerpt h3 {
     font-size: 1.4rem;
 }
-.post-excerpt h5 {
+.post-excerpt h3 {
     font-size: 1.2rem;
+}
+.post-excerpt h5 {
+    font-size: 1.0rem;
 }
 .post-excerpt h6 {
     font-size: 1.0rem;
@@ -619,9 +624,12 @@ margin on the iframe, cause it breaks stuff. */
     margin: 1rem auto;
 }
 
-.post-excerpt .continue {
+.continue {
+
+    text-decoration: none;
+
     /* text-align: center; */
-    background: #eee;
+    color: #8c1d35;
     /* padding: 0.6rem; */
 }
 
