@@ -168,6 +168,8 @@ p, ul, ol, dl {
     margin: 24px 0;
     line-height: 140%;
     color: #555;
+    font-family: initial;
+    font-size: 16px;
 }
 
 li p {
@@ -574,12 +576,14 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-excerpt {
-    padding: 0 2rem;
+    padding:0;
 }
+
 .post-excerpt p {
     font-size: 1.8rem;
     line-height: 2.6rem;
     margin: 1.3rem 0;
+    font-size: 16px;
 }
 
 .post-excerpt h1,
@@ -625,12 +629,10 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .continue {
-
-    text-decoration: none;
-
-    /* text-align: center; */
     color: #8c1d35;
-    /* padding: 0.6rem; */
+    font-size: 18px;
+    font-family: initial;
+    text-decoration: underline;
 }
 
 /* The author credit area after the post */

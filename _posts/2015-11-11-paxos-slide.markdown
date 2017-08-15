@@ -23,7 +23,7 @@ Paxos 已经逐渐被承认是分布式系统中不可缺少的核心算法,
     这部分可以作为paxos原paper的实现部分的概括.
     如果你打算实现自己的paxos或类似协议, 需要仔细了解协议细节,
     希望这部分内容可以帮你节省阅读原paper的时间.
-
+<!--more-->
 
 <p><a href="http://www.slideshare.net/drmingdrmer/paxos-51731377"> View it on slideshare.net!</a></p>
 
@@ -58,4 +58,4 @@ href="//www.slideshare.net/drmingdrmer/paxos-51731377" title="可靠分布式系
 target="_blank">可靠分布式系统基础 Paxos的直观解释</a> </strong> from <strong><a
 href="//www.slideshare.net/drmingdrmer" target="_blank">Yanpo Zhang</a></strong> </div>
 
-<!--more-->
+
