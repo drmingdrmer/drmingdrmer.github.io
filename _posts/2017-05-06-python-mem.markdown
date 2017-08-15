@@ -47,6 +47,8 @@ Python 2.7.5
 CentOS Linux release 7.2.1511 (Core)
 ```
 
+<!--more-->
+
 python程序在长时间(较大负载)运行一段时间后, python 进程的系统占用内存持续升高:
 
 ```sh
@@ -80,7 +82,7 @@ root     124910 10.2  0.8 5232084 290952 ?      Sl   Mar17 220:37 python2 offlin
 LD_PRELOAD="/usr/lib64/libtcmalloc.so" python x.py
 ```
 
-<!--more-->
+
 
 <a class="md-anchor" name="定位问题过程"></a>
 
