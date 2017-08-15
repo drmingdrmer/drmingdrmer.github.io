@@ -18,6 +18,8 @@ tags: util git auto squash filter-branch
 这个工具 `git-auto-squash` 可以将提交历史中连续的fixup
 合并到它之前最早的1个正式提交点上，类似不需要交互的`rebase --interactive`。
 
+<!--more-->
+
 ```sh
 git-auto-squash
   Rewrite history to squash all commits wiht message starts with

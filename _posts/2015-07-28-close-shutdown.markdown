@@ -18,6 +18,8 @@ close(sock_fd);
 shutdown(sock_fd, ...);
 ```
 
+<!--more-->
+
 多数情况下这2个方法的效果没有区别，可以互换使用。除了：
 
 -   close() 是针对file的操作
@@ -28,7 +30,7 @@ nix系统里socket是1个文件，但文件不1定是1个socket;
 所以在进入系统调用后和达到协议层前(发出FIN包这一段),
 close()和shutdown()的行为会有1点差异。
 
-<!--more-->
+
 
 到达协议层以后，close()和shutdown()没有区别。
 
