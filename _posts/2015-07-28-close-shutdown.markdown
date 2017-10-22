@@ -39,9 +39,9 @@ close()和shutdown()的行为会有1点差异。
 下面通过几个例子演示下close()和shutdown()在多线程并发时的行为差异,
 我们假设场景是:
 
--   sock_fd 是一个blocking mode的socket。
--   thread-1 正在对sock_fd进行阻塞的recv()，还没有返回。
--   thread-2 直接对sock_fd调用close() 或 shutdown()。
+-   `sock_fd` 是一个blocking mode的socket。
+-   thread-1 正在对`sock_fd`进行阻塞的recv()，还没有返回。
+-   thread-2 直接对`sock_fd`调用close() 或 shutdown()。
 -   不考虑linger。
 
 ## 栗子1: socket阻塞在recv()上, 调用close()
@@ -70,10 +70,10 @@ Time
 
 在上面的例子里：
 
--   (1) thread-2 调用close()立即成功返回，这时recv()还在使用sock_fd。
+-   (1) thread-2 调用close()立即成功返回，这时recv()还在使用`sock_fd`。
 
-    这里因为有另外1个线程thread-1正在使用sock_fd，
-    所以只是标记这个sock_fd为要关闭的。
+    这里因为有另外1个线程thread-1正在使用`sock_fd`，
+    所以只是标记这个`sock_fd`为要关闭的。
     socket并没有真正关闭。
 
     这时recv()还继续处于阻塞读取状态。
@@ -109,10 +109,10 @@ Time
 
 在上面的例子里：
 
--   (1) thread-1还在等待sock_fd, thread-2调用shutdown(),
+-   (1) thread-1还在等待`sock_fd`, thread-2调用shutdown(),
     立即开始关闭socket的流程，发FIN 包等。
 
-    然后, 内核中tcp_shutdown中会调用[sock_def_wakeup]
+    然后, 内核中`tcp_shutdown`中会调用[sock_def_wakeup]
     唤醒阻塞在recv()上的thread-1。
 
 -   (2) 这时recv()阻塞的线程被唤醒等待并立即返回。
@@ -147,10 +147,10 @@ Time
  v                                |
 ```
 
--   (1) thread-1还在等待sock_fd, thread-2调用shutdown(),
+-   (1) thread-1还在等待`sock_fd`, thread-2调用shutdown(),
     立即开始关闭socket的流程，发FIN 包等。
 
-    然后, 内核中tcp_shutdown中会调用[sock_def_wakeup]
+    然后, 内核中`tcp_shutdown`中会调用[sock_def_wakeup]
     唤醒阻塞在accept()上的thread-1。
 
 -   (2) 这时在accept()上阻塞的线程被唤醒, 并立即返回。
@@ -186,7 +186,7 @@ Time
 必须等到有下一个连接进来才能唤醒accept()，
 进而退出整个进程。
 
-所以后来改成使用shutdown()来关闭sock_fd，以达到唤醒accept()的goroutine的目的。
+所以后来改成使用shutdown()来关闭`sock_fd`，以达到唤醒accept()的goroutine的目的。
 </strike>
 
 ---
@@ -201,7 +201,7 @@ Time
 -   go里的socket本来应该都是nonblocking的。
 
     go内部accept的系统调用在没有连接时返回-1，
-    然后进入事件的等待(epoll_wait等)。
+    然后进入事件的等待(`epoll_wait`等)。
 
     执行`TCPListener.Accept`的goroutine如果没有收到connect请求,
     就把自己挂起来, 等待网络事件到来.
