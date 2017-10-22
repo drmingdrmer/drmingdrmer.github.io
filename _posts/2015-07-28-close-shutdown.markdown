@@ -123,7 +123,7 @@ Time
 
 #### 以上2个例子的代码
 
-[close-or-shutdown-recv](/snippet/close-shutdown/recv.c)
+[close-or-shutdown-recv](/post-res/close-shutdown/snippet/recv.c)
 
 
 ## 栗子3: socket阻塞在accept()上, 调用shutdown()
@@ -278,7 +278,7 @@ syscall.SetNonblock( int(f.Fd()), true )
 
 下面这段代码可以重现go中Close不唤醒的问题：
 
-[close-does-not-wake-up-accept.go](/snippet/close-shutdown/close-does-not-wake-up-accept.go)
+[close-does-not-wake-up-accept.go](/post-res/close-shutdown/snippet/close-does-not-wake-up-accept.go)
 
 ```
 package main
