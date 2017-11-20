@@ -22,7 +22,7 @@ If `n` $$ \approx $$ `b`, the hash table would look like this:
 The following chart created by program simulation shows distribution of 20 keys
 over 20 buckets.
 
-![](/img/hash/dist-1-with-label.png)
+![](/post-res/hash/img/dist-1-with-label.png)
 
 <!--more-->
 
@@ -65,7 +65,7 @@ the picture shows:
 | 10.0        | 00% | 00% | 100% |
 
 
-![](/img/hash/load-factor-empty-collision.png)
+![](/post-res/hash/img/load-factor-empty-collision.png)
 
 > **0.75** has been chosen as upper limit of `load factor` not only because
 > of concerns of collision rate, but also because of the way [linear-probing]
@@ -114,9 +114,9 @@ $$ {avg} = \frac{n}{b} $$
 The following charts show what distribution is like when `load factor` is **10**,
 **100** and **1000**:
 
-![](/img/hash/dist-10.png)
-![](/img/hash/dist-100.png)
-![](/img/hash/dist-1000.png)
+![](/post-res/hash/img/dist-10.png)
+![](/post-res/hash/img/dist-100.png)
+![](/post-res/hash/img/dist-1000.png)
 
 
 As `load factor` becomes higher, the gap between the most keys and the fewest

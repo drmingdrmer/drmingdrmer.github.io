@@ -52,7 +52,7 @@ tags: hash collision math zh
 下面这个图更直观的展示了当`n=b=20`的时候, hash表中每个bucket中key的个数的分布,
 (我们按照key的数量对bucket做了排序):
 
-![](/img/hash/dist-1-with-label.png)
+![](/post-res/hash/img/dist-1-with-label.png)
 
 <!--more-->
 
@@ -84,7 +84,7 @@ tags: hash collision math zh
 
 更直观1点, 我们用一个图来展示空bucket率 和 冲突率 随`n/b`的变化趋势:
 
-![](/img/hash/load-factor-empty-collision.png)
+![](/post-res/hash/img/load-factor-empty-collision.png)
 
 
 
@@ -216,9 +216,9 @@ $$ {avg} = \frac{n}{b} $$
 
 下面3个图模拟了 `b=20`, `n/b`分别是 `10`, `100`, `1000`时, bucket中key的数量分布.
 
-![](/img/hash/dist-10.png)
-![](/img/hash/dist-100.png)
-![](/img/hash/dist-1000.png)
+![](/post-res/hash/img/dist-10.png)
+![](/post-res/hash/img/dist-100.png)
+![](/post-res/hash/img/dist-1000.png)
 
 
 我们看出当 `n/b` 增大时, 最多key的bucket和最少key的bucket的差距在逐渐缩小.
