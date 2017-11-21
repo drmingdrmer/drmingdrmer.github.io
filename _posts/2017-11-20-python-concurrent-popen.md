@@ -137,6 +137,14 @@ Popen 调用的最核心的代码是`subprocess.py` 中的 `_execute_child`,
 问题的原因可以从下面这段简化版的代码中看到:
 
 ```python
+
+def pipe_cloexec(self):
+    # 1) 创建pipe用于父子进程通信...
+    r, w = os.pipe()
+    self._set_cloexec_flag(r)
+    self._set_cloexec_flag(w)
+    return r, w
+
 def _execute_child(self, args, executable, preexec_fn, close_fds,
                    cwd, env, universal_newlines,
                    startupinfo, creationflags, shell, to_close,
@@ -214,7 +222,7 @@ def _execute_child(self, args, executable, preexec_fn, close_fds,
 这几对pipe会在fork时被继承到子进程.
 子进程在进行exec之前(创建pipe时), 已经将pipe的fd设置FD_CLOEXEC:
 执行exec时自动关闭fd.
-**但并没有对其他fd进行这个设置**.
+**但可能其他线程的pipe-fd还没有对其进行这个设置**(步骤1中`pipe_cloexec`的`os.pipe()`之后, 发生了fork).
 
 因此, 如果并发地调用`Popen`, 1个子进程会在fork时带着为别的子进程准备的pipe fd,
 并且不会关闭它们(因为子进程只知道自己的pipe fd, 没有设置`close_fds`时, 它不会鲁莽地关闭其他fd)!
