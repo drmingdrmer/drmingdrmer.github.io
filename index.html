@@ -14,8 +14,7 @@ about: 'about.html'
                 </a>
             {% endif %}
             <h1 class="blog-title">{{ site.name}}</h1>
-            <h2 class="blog-description"> 
-                {{ site.description }}. 
+            <h2 class="blog-description">
                 {% if page.about %} <a href='{{site.baseurl}}{{ page.about }}'> About me </a> {% endif %}
             </h2>
         </div>
@@ -61,11 +60,11 @@ about: 'about.html'
         {% endif %}
 
         <span class="page-number"> Page {{paginator.page}} of {{paginator.total_pages}} </span>
-        
-        {% if paginator.next_page %} 
+
+        {% if paginator.next_page %}
         <a class="older-posts" href="/page{{ paginator.next_page }}/" title="Next Page">Older Posts &raquo;</a>
-        {% endif %} 
+        {% endif %}
     </nav>
-    
+
 
 </main>

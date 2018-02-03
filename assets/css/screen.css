@@ -120,7 +120,6 @@ h1 {
     font-size: 3.0rem;
     line-height: 1.2em;
     text-indent: -3px;
-    border-bottom: 1px solid #ccc;
 }
 
 h2 {
@@ -467,6 +466,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .post-title {
     margin:0;
+    border-bottom: 1px solid #ccc;
 }
 
 .post-title a {
