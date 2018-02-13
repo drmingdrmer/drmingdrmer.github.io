@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: about
 title: About me
 ---
 
@@ -21,3 +21,4 @@ drdrxp's [Github](https://github.com/drmingdrmer)
 [drdrxp](http://weibo.com/drdrxp) at weibo.com
 
 drdr.xp at gmail.com
+

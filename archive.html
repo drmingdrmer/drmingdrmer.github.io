@@ -1,0 +1,16 @@
+---
+layout: page_with_header
+title: XP的博客-文章列表
+cover: false
+about: 'about.html'
+---
+
+<article class="post">
+    <section class="archive">
+        <ul>
+            {% for post in site.posts %}
+            <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+</article>

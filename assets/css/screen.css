@@ -405,6 +405,37 @@ margin on the iframe, cause it breaks stuff. */
     background-size: cover;
 }
 
+.site-menu {
+    display: block;
+    position: relative;
+    width:80%;
+    max-width: 700px;
+    margin: 0rem auto;
+
+    border:    1px solid #ddd;
+    /* border-width: 0 0 1px 0; */
+
+    word-break: break-word;
+    hyphens: auto;
+
+    font-size: 1.6rem;
+    line-height: 1.9em;
+}
+
+.site-menu .site-menu-item {
+    display: inline-block;
+    width:   16rem;
+
+    border:       1px solid #ddd;
+    border-width: 0 1px 0 0;
+
+    text-align: center;
+}
+
+.site-menu .site-menu-item a {
+    color: #888;
+}
+
 .blog-logo {
     text-decoration: none;
 }
