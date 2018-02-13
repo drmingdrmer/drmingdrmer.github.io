@@ -147,6 +147,7 @@ h6 {
 a {
     color: #44f;
     transition: color ease 0.3s;
+    text-decoration: none;
 }
 
 a:hover {
