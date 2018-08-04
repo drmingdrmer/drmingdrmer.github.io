@@ -324,6 +324,6 @@ SET GLOBAL group_replication_bootstrap_group=OFF;
 
 ## 参考:
 
-https://www.percona.com/blog/2017/02/24/battle-for-synchronous-replication-in-mysql-galera-vs-group-replication/
+[battle-for-synchronous-replication-in-mysql-galera-vs-group-replication](https://www.percona.com/blog/2017/02/24/battle-for-synchronous-replication-in-mysql-galera-vs-group-replication/)
 
-[Features_Pros_Cons_MySQL_Group_Replication](/post/mysql-group-replication/DV_WP-Features_Pros_Cons_MySQL_Group_Replication.pdf)
+[Features_Pros_Cons_MySQL_Group_Replication.pdf](/post/mysql-group-replication/DV_WP-Features_Pros_Cons_MySQL_Group_Replication.pdf)
