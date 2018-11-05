@@ -8,7 +8,19 @@ tags:       绘画
 
 <!--excerpt-->
 
-![](/post-res/dragon-girl/2018-10-04-pad-procreate.jpg)
+<table>
+<tr>
+
+<td style="background: none; width: 33.33%">
+<a href="/post-res/dragon-girl/2018-10-04-pad-procreate.jpg" target="_blank">
+<img src="/post-res/dragon-girl/2018-10-04-pad-procreate-small.jpg" />
+</a>
+</td>
+
+</tr>
+</table>
+
+<!-- ![](/post-res/dragon-girl/2018-10-04-pad-procreate.jpg) -->
 
 李若彤版的小龙女, 美到不真实.
 
