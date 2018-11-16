@@ -12,20 +12,20 @@ tags:       绘画
 <tr>
 
 <td style="background: none; width: 33.33%">
-<a href="../post-res/breaking-bad/breaking-bad-01.jpg" target="_blank">
-<img src="../post-res/breaking-bad/breaking-bad-01-small.jpg" />
+<a href="/post-res/breaking-bad/breaking-bad-01.jpg" target="_blank">
+<img src="/post-res/breaking-bad/breaking-bad-01-small.jpg" />
 </a>
 </td>
 
 <td style="background: none; width: 33.33%">
-<a href="../post-res/breaking-bad/breaking-bad-02.jpg" target="_blank">
-<img src="../post-res/breaking-bad/breaking-bad-02-small.jpg" />
+<a href="/post-res/breaking-bad/breaking-bad-02.jpg" target="_blank">
+<img src="/post-res/breaking-bad/breaking-bad-02-small.jpg" />
 </a>
 </td>
 
 <td style="background: none; width: 33.33%">
-<a href="../post-res/breaking-bad/breaking-bad-03.jpg" target="_blank">
-<img src="../post-res/breaking-bad/breaking-bad-03-small.jpg" />
+<a href="/post-res/breaking-bad/breaking-bad-03.jpg" target="_blank">
+<img src="/post-res/breaking-bad/breaking-bad-03-small.jpg" />
 </a>
 </td>
 
@@ -34,20 +34,20 @@ tags:       绘画
 <tr>
 
 <td style="background: none; width: 33.33%">
-<a href="../post-res/breaking-bad/breaking-bad-04.jpg" target="_blank">
-<img src="../post-res/breaking-bad/breaking-bad-04-small.jpg" />
+<a href="/post-res/breaking-bad/breaking-bad-04.jpg" target="_blank">
+<img src="/post-res/breaking-bad/breaking-bad-04-small.jpg" />
 </a>
 </td>
 
 <td style="background: none; width: 33.33%">
-<a href="../post-res/breaking-bad/breaking-bad-06.jpg" target="_blank">
-<img src="../post-res/breaking-bad/breaking-bad-06-small.jpg" />
+<a href="/post-res/breaking-bad/breaking-bad-06.jpg" target="_blank">
+<img src="/post-res/breaking-bad/breaking-bad-06-small.jpg" />
 </a>
 </td>
 
 <td style="background: none; width: 33.33%">
-<a href="../post-res/breaking-bad/breaking-bad-2018-11-17.jpg" target="_blank">
-<img src="../post-res/breaking-bad/breaking-bad-2018-11-17-small.jpg" />
+<a href="/post-res/breaking-bad/breaking-bad-2018-11-17.jpg" target="_blank">
+<img src="/post-res/breaking-bad/breaking-bad-2018-11-17-small.jpg" />
 </a>
 </td>
 
