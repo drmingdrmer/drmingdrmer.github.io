@@ -46,8 +46,8 @@ tags:       绘画
 </td>
 
 <td style="background: none; width: 33.33%">
-<a href="/post-res/breaking-bad/breaking-bad-2018-11-17.jpg" target="_blank">
-<img src="/post-res/breaking-bad/breaking-bad-2018-11-17-small.jpg" />
+<a href="/post-res/breaking-bad/breaking-bad-2018-11-17-2.jpg" target="_blank">
+<img src="/post-res/breaking-bad/breaking-bad-2018-11-17-2-small.jpg" />
 </a>
 </td>
 
