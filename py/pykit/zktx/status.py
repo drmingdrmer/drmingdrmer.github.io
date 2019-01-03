@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+COMMITTED = 'COMMITTED'
+PURGED = 'PURGED'
+
+PAUSED = 'PAUSED'
+UNKNOWN = 'UNKNOWN'
+
+STATUS = dict(
+    COMMITTED=COMMITTED,
+    PURGED=PURGED,
+)
