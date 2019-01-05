@@ -1,17 +1,23 @@
 #!/usr/bin/env python2
 # coding: utf-8
 
+import base64
+import os
+import re
 import sys
 
-import re
-import base64
-from pykit import proc
-from mistune import Markdown
-from mistune import BlockLexer
 from mistune import BlockGrammar
+from mistune import BlockLexer
 from mistune import InlineLexer
+from mistune import Markdown
 from mistune import Renderer
+
 from mistune_contrib import math as mmath
+from pykit import proc
+
+
+def dd(*msg):
+    print ''.join([str(x) for x in msg])
 
 
 class MathBlockLexer(mmath.MathBlockMixin, BlockLexer):
@@ -56,10 +62,10 @@ class MathRenderer(Renderer):
         proc.command_ex('pdflatex', texfn)
         proc.command_ex('pdfcrop', pdffn, croppedfn)
         rc, pngdata, err = proc.command_ex(
-                'convert',
-                '-density', '160',
-                '-quality', '100',
-                croppedfn, 'png:-'
+            'convert',
+            '-density', '160',
+            '-quality', '100',
+            croppedfn, 'png:-'
         )
 
         datauri = "data:{};base64,{}".format('image/png',
@@ -67,12 +73,25 @@ class MathRenderer(Renderer):
         tooltip = text.replace('"', '&quot;')
 
         img = '<img style="vertical-align: bottom; display: inline;" src="{datauri}" alt="{alt}" title="{title}"/>'.format(
-                datauri=datauri,
-                title=tooltip,
-                alt=tooltip,
+            datauri=datauri,
+            title=tooltip,
+            alt=tooltip,
         )
 
+        for fn in (croppedfn,
+                   pdffn,
+                   texfn,
+                   basefn + '.log',
+                   basefn + '.aux',
+                   ):
+            try:
+                os.unlink(fn)
+            except EnvironmentError as e:
+                pass
+
+        dd('built latex ', repr(text))
         return img
+
 
 class MathMarkdown(Markdown):
 
@@ -98,7 +117,7 @@ def build_page(srcpath, dstpath=None):
     md = MathMarkdown(render,
                       inline=inline,
                       block=MathBlockLexer
-    )
+                      )
 
     html = md(body)
     html = head + html
@@ -108,6 +127,7 @@ def build_page(srcpath, dstpath=None):
             f.write(html)
 
     return html
+
 
 if __name__ == "__main__":
     src = sys.argv[1]
