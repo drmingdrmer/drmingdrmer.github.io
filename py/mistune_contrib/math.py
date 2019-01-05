@@ -57,6 +57,12 @@ class MathMarkdownMixin(object):
         body += '\n'
         return body
 
+    def output_block_latex(self):
+        body = '\n'
+        body += self.renderer.block_latex(self.token['name'],
+                                          self.token['text'])
+        body += '\n'
+        return body
 
 class MathInlineMixin(object):
     """Math mixin for InlineLexer, mix this with InlineLexer::
@@ -79,15 +85,15 @@ class MathInlineMixin(object):
 class MathRendererMixin(object):
     def block_math(self, text):
         # override with customized math rendering
-        return '$$ this is my math: %s$$' % text
+        return '$$ math-renderer-mixin-block: %s$$' % text
 
     def block_latex(self, name, text):
         # override with customized math rendering
-        return r' this is my math: \begin{%s}%s\end{%s}' % (name, text, name)
+        return r' math-renderer-mixin-latex: \begin{%s}%s\end{%s}' % (name, text, name)
 
     def math(self, text):
         # override with customized math rendering
-        return '$ this is my math: %s$' % text
+        return '$ math-renderer-mixin-inline: %s$' % text
 
 
 if __name__ == "__main__":
