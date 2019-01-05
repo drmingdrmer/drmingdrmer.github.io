@@ -35,21 +35,43 @@ class MathInlineLexer(InlineLexer, mmath.MathInlineMixin):
 class MathRenderer(Renderer):
 
     def block_math(self, text):
-        return self.math(text, quote='$$')
+        return self.math(text, is_block=True, quote='$$')
 
     def block_latex(self, name, text):
         return r'\begin{%s}%s\end{%s}' % (name, text, name)
 
-    def math(self, text, quote='$'):
+    def math(self, text, is_block=False, quote='$'):
+
 
         # remove empty line those annoy pdflatex
         text = re.sub('\n *\n', '\n', text)
+        text = text.strip()
+
+        if is_block:
+            # begin{equation} and $$ both starts a display-math block
+            if text.startswith('\\begin{equation}'):
+                pass
+            else:
+                text = '$$\n%s\n$$' % text
+        else:
+            text = '$' + text + '$'
 
         tex = ('\\documentclass{article}\n'
                '\\pagestyle{empty}\n'
+               '\\usepackage{amsmath}\n'
+               '\\usepackage{amsfonts}\n'
+               '\\usepackage[mathletters]{ucs}\n'
+               '\\usepackage[utf8x]{inputenc}\n'
+               '\\newcommand{\\lt}{<}\n'
+               '\\newcommand{\\gt}{>}\n'
                '\\begin{document}\n'
-               '%s%s%s\n'
-               '\end{document}') % (quote, text, quote)
+               '%s\n'
+               '\end{document}') % (text, )
+
+        dd()
+        dd('==== building latex:')
+        dd()
+        dd(str(tex))
 
         basefn = 'xp-blog-tmp'
         texfn = basefn + '.tex'
@@ -89,7 +111,9 @@ class MathRenderer(Renderer):
             except EnvironmentError as e:
                 pass
 
-        dd('built latex ', repr(text))
+        dd()
+        dd('---- built latex ', repr(text))
+        dd()
         return img
 
 
