@@ -37,11 +37,11 @@ layout: default
 
         <h1 class="post-title">{{ page.title }}</h1>
 
-        <span style="float:right;">
-            <iframe style="margin:0;" width="86" height="16" scrolling="no" frameborder="0"
+        <div style="overflow: hidden;">
+            <iframe style="margin:0; float:right;" width="86" height="16" scrolling="no" frameborder="0"
                 src="http://hits.sinajs.cn/A1/weiboshare.html?url={{ site.url }}{{ page.url }}&amp;type=6&amp;{% if site.weibo_uid %}ralateUid={{ site.weibo_uid }}&amp;{% endif %}title=xp最近才发现的：{{page.title}}&amp;language=zh_cn" allowtransparency="true">
             </iframe>
-        </span>
+        </div>
 
         <section class="post-content">
             {{content}}
