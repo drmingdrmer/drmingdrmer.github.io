@@ -28,6 +28,11 @@ tags:       python debug concurrency race-condition multithread popen subprocess
 
 这个问题是由于fd被多个子进程同时继承导致的.
 
+**感谢评论中的 周波 的提醒:**
+
+> python3.4 CentOS Linux release 7.3.1611 (Core), 默认值已经是True
+
+**这个问题只作为一个case来分享, 高版本的python不必再担心啦~**
 
 
 <a class="md-anchor" name="重现问题的代码"></a>
