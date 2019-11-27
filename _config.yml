@@ -20,7 +20,7 @@ baseurl:   '/'
 email:     'drdr.xp@gmail.com'
 aboutme:   'VP of Engineering at Baishancloud.com'
 
-gems:
+plugins:
     - jekyll-paginate
     - jekyll-feed
     # - jemoji
