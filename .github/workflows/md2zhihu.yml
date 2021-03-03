@@ -1,30 +1,15 @@
 name: md2zhihu
-
-on:
-  push:
-  pull_request:
-
+on: [push]
 jobs:
-  build:
-
+  md2zhihu:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    - name: Install
-      run: |
-        git clone https://github.com/drmingdrmer/md2zhihu.git
-        sh md2zhihu/github-install.sh
-    - name: build zhihu compatible markdowns
+    - uses: drmingdrmer/md2zhihu@ci
       env:
         GITHUB_USERNAME: ${{ github.repository_owner }}
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: |
-        md2zhihu \
-        --repo https://github.com/${{ github.repository }}.git@zhihu_branch \
-        --code-width 600 \
-        --asset-dir _md2zhihu \
-        _posts/*.md
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        pattern: >
+            _posts/*.md
+            _posts/*.markdown

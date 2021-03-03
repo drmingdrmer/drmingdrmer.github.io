@@ -1,0 +1,45 @@
+
+1个客户端同时向服务器发出100个请求，等待所有的请求都返回才算成功。  
+99%的请求10ms返回，1%的请求1000ms返回.
+
+假设慢请求的概率是 <img src="https://www.zhihu.com/equation?tex=%20p%20%3D%200.01%20" alt=" p = 0.01 " class="ee_img tr_noresize" eeimg="1"> ，请求总数是 <img src="https://www.zhihu.com/equation?tex=%20n%20%3D%20100%20" alt=" n = 100 " class="ee_img tr_noresize" eeimg="1">.
+能快速(10ms)返回的概率有多少？如何优化?
+
+<!--more-->
+
+#### 所有请求都能在10ms内返回的概率只有 36%：
+
+第1个请求能在10ms内返回的概率是: <img src="https://www.zhihu.com/equation?tex=%201%20-%20p%20%3D%200.99%20" alt=" 1 - p = 0.99 " class="ee_img tr_noresize" eeimg="1">  
+第1个请求和第2个请求都能在10ms内返回的概率是: <img src="https://www.zhihu.com/equation?tex=%20%28%201%20-%20p%20%29%5E2%20%3D%200.99%20%5Ctimes%200.99%20" alt=" ( 1 - p )^2 = 0.99 \times 0.99 " class="ee_img tr_noresize" eeimg="1">  
+...
+
+所有请求都在10ms内返回的概率是: <img src="https://www.zhihu.com/equation?tex=%20%281-p%29%5En%20%3D%200.99%5E%7B100%7D%20%5Capprox%200.36%25%20" alt=" (1-p)^n = 0.99^{100} \approx 0.36% " class="ee_img tr_noresize" eeimg="1">
+
+#### 通过重试提高成功率
+
+但如果假设可以重试多次,情况会好得多.
+
+对每1个请求,如果第1次没有在10ms内返回,则立即中断,立即发起1次重试.
+则两次都超时的概率是： <img src="https://www.zhihu.com/equation?tex=%20p%5E2%20%3D%200.0001%20" alt=" p^2 = 0.0001 " class="ee_img tr_noresize" eeimg="1"> .
+
+因此,对每个请求,重试两次,成功的概率是： <img src="https://www.zhihu.com/equation?tex=%201%20-%20p%5E2%20%3D%200.9999%20" alt=" 1 - p^2 = 0.9999 " class="ee_img tr_noresize" eeimg="1"> .  
+所有请求都允许最多重试2次,则全部都成功的概率是: $$ (1-p^2)^n \approx 99.00 % $$ . 总耗时20ms.  
+如果允许重试3次,成功率是: $$ (1-p^3)^n \approx 99.99 % $$ . 总耗时30ms.
+
+重试次数与请求成功率的关系
+
+| 重试次数 | 请求耗时 | 成功率 |
+| 1        | 10ms     | 36%    |
+| 2        | 20ms     | 99.00% |
+| 3        | 30ms     | 99.99% |
+
+<!--
+Here is an example MathJax inline rendering \\( 1/x^{2} \\)
+And here is a block rendering:
+\\[ \frac{1}{n^{2}} \\]
+-->
+
+
+
+Reference:
+
