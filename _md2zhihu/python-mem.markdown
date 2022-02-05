@@ -506,10 +506,10 @@ pyrasite-shell 11122
 
 Reference:
 
-- objgraph : [https://mg.pov.lt/objgraph/](https://mg.pov.lt/objgraph/)
-
 - debug-with-gdb : [https://wiki.python.org/moin/DebuggingWithGdb](https://wiki.python.org/moin/DebuggingWithGdb)
 
+- objgraph : [https://mg.pov.lt/objgraph/](https://mg.pov.lt/objgraph/)
 
-[objgraph]:  https://mg.pov.lt/objgraph/
+
 [debug-with-gdb]:  https://wiki.python.org/moin/DebuggingWithGdb
+[objgraph]:  https://mg.pov.lt/objgraph/

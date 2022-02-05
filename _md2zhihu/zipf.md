@@ -47,7 +47,7 @@ k个文件中, 最热的`pk`个文件的访问占比是`(1-p)`,
 <img src="https://www.zhihu.com/equation?tex=p%20f%28pk%29%20%3D%20%281-p%29f%28k%29%5C%5C" alt="p f(pk) = (1-p)f(k)\\" class="ee_img tr_noresize" eeimg="1">
 
 好了, 这样一个关系构成了一个数列的递推式.
-如果我们先选择曲线上的一个点(k₀, y₀) 满足 $ y_0 = f(k_0) $, 
+如果我们先选择曲线上的一个点(k₀, y₀) 满足 <img src="https://www.zhihu.com/equation?tex=%20y_0%20%3D%20f%28k_0%29%20" alt=" y_0 = f(k_0) " class="ee_img tr_noresize" eeimg="1">, 
 那么根据上面的递推式很容易得到一组都在曲线上的点(kᵢ, yᵢ):
 
 <img src="https://www.zhihu.com/equation?tex=k_i%20%3D%20k_0%20p%5E%7Bi-1%7D%5C%5Cy_i%20%3D%20y_0%20%28%5Cfrac%7B1-p%7D%7Bp%7D%29%5E%7Bi-1%7D%5C%5C" alt="k_i = k_0 p^{i-1}\\y_i = y_0 (\frac{1-p}{p})^{i-1}\\" class="ee_img tr_noresize" eeimg="1">
@@ -57,7 +57,7 @@ k个文件中, 最热的`pk`个文件的访问占比是`(1-p)`,
 
 <img src="https://www.zhihu.com/equation?tex=%5Clg%20y_i%20%3D%5Cfrac%7B%5Clg%20%5Cfrac%7B1-p%7D%7Bp%7D%7D%7B%5Clg%20p%7D%20%5Clg%20k_i%20%2B%20%28%5Clg%20y_0%20-%20%5Cfrac%7B%5Clg%20%5Cfrac%7B1-p%7D%7Bp%7D%7D%7B%5Clg%20p%7D%20%5Clg%20k_0%29%5C%5C" alt="\lg y_i =\frac{\lg \frac{1-p}{p}}{\lg p} \lg k_i + (\lg y_0 - \frac{\lg \frac{1-p}{p}}{\lg p} \lg k_0)\\" class="ee_img tr_noresize" eeimg="1">
 
-我们再对两边取下指数就可以看到: 基于(k₀, y₀) 选择的这组点是满足 $y = c/k^s$ 的形式.
+我们再对两边取下指数就可以看到: 基于(k₀, y₀) 选择的这组点是满足 <img src="https://www.zhihu.com/equation?tex=y%20%3D%20c/k%5Es" alt="y = c/k^s" class="ee_img tr_noresize" eeimg="1"> 的形式.
 目前我们已经可以确定曲线上有一组点集是符合我们的频率分布公式的了,
 剩下的点再接着处理一下:
 
@@ -68,7 +68,7 @@ a的值只跟最初选择的p相关.
 又因为我们假设整个曲线是平滑的, 直观上就可以得出结论:
 
 **所有不同的(k₀, y₀) 确定的曲线的c值是一样的(否则距离很近的2个k₀可以反例出不可导的情况.),
-也就是说所有点都在一条$y = c/k^s$的曲线上**.
+也就是说所有点都在一条<img src="https://www.zhihu.com/equation?tex=y%20%3D%20c/k%5Es" alt="y = c/k^s" class="ee_img tr_noresize" eeimg="1">的曲线上**.
 
 在大量的数据统计中`s`的值不是一个常量, 在比较热的访问中(k比较小的区域),
 `s`一般在0到1之间,
@@ -76,7 +76,7 @@ a的值只跟最初选择的p相关.
 
 # 如何将访问计数转换成对应的zipf分布的公式
 
-想要用公式形式$f(k) = c/k^s$替代原来的描点描出的曲线, 先要确定式子里面`s`和`c`的值
+想要用公式形式<img src="https://www.zhihu.com/equation?tex=f%28k%29%20%3D%20c/k%5Es" alt="f(k) = c/k^s" class="ee_img tr_noresize" eeimg="1">替代原来的描点描出的曲线, 先要确定式子里面`s`和`c`的值
 
 这也很简单, 拿到一段访问日志后,
 首先统计独立url计数,
@@ -130,16 +130,16 @@ Discover, Design, Distribute
 
 Reference:
 
-- find-zipf.py : [/post-res/cache-hit/find-zipf.py](/post-res/cache-hit/find-zipf.py)
-
 - file-access-count.txt : [/post-res/cache-hit/file-access-count.txt](/post-res/cache-hit/file-access-count.txt)
 
-- 多项式回归 : [https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92](https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92)
+- find-zipf.py : [/post-res/cache-hit/find-zipf.py](/post-res/cache-hit/find-zipf.py)
 
 - zipf : [https://en.wikipedia.org/wiki/Zipf%27s_law](https://en.wikipedia.org/wiki/Zipf%27s_law)
 
+- 多项式回归 : [https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92](https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92)
 
-[find-zipf.py]: /post-res/cache-hit/find-zipf.py
+
 [file-access-count.txt]: /post-res/cache-hit/file-access-count.txt
-[多项式回归]:  https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92
+[find-zipf.py]: /post-res/cache-hit/find-zipf.py
 [zipf]:  https://en.wikipedia.org/wiki/Zipf%27s_law
+[多项式回归]:  https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92

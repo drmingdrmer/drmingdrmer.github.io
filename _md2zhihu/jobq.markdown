@@ -2,7 +2,7 @@
 `jobq.py` processes serial of input elements with several functions
 concurrently and sequentially.
 
-Check out on github: [jobq][jobq-github].
+Check out on github: [jobq](https://github.com/baishancloud/jobq).
 
 Example:
 
@@ -78,7 +78,7 @@ jobq.run( range( 10 ), [ drop_even_number, printarg ] )
 # > 9
 ```
 
-Check out on github: [jobq][jobq-github].
+Check out on github: [jobq](https://github.com/baishancloud/jobq).
 
 
 

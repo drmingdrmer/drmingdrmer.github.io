@@ -804,17 +804,39 @@ snapshot的方式存储数据.
 
 Reference:
 
-- paxos made simple : [http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple](http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple)
+- Example_setAndGetByKeyVer : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/example_set_get_test.go](https://github.com/openacid/paxoskv/blob/naive/paxoskv/example_set_get_test.go)
 
 - Leslie Lamport : [http://www.lamport.org/](http://www.lamport.org/)
 
-- protobuf : [https://developers.google.com/protocol-buffers](https://developers.google.com/protocol-buffers)
+- PaxosKV : [https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto#L16](https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto#L16)
 
-- install-protoc : [https://grpc.io/docs/protoc-installation/](https://grpc.io/docs/protoc-installation/)
+- RunPaxos : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go#L46](https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go#L46)
+
+- TestCase1SingleProposer : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L11](https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L11)
+
+- TestCase2DoubleProposer : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L57](https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L57)
 
 - grpc : [https://grpc.io/](https://grpc.io/)
 
-- paxos的直观解释 : [https://blog.openacid.com/algo/paxos](https://blog.openacid.com/algo/paxos)
+- https://github.com/openacid/paxoskv/tree/naive : [https://github.com/openacid/paxoskv/tree/naive](https://github.com/openacid/paxoskv/tree/naive)
+
+- impl.go : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go](https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go)
+
+- install-protoc : [https://grpc.io/docs/protoc-installation/](https://grpc.io/docs/protoc-installation/)
+
+- issue : [https://github.com/openacid/paxoskv/issues/new/choose](https://github.com/openacid/paxoskv/issues/new/choose)
+
+- paxos made simple : [http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple](http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple)
+
+- paxoskv : [https://github.com/openacid/paxoskv/tree/naive](https://github.com/openacid/paxoskv/tree/naive)
+
+- paxoskv.pb.go : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxoskv.pb.go](https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxoskv.pb.go)
+
+- paxoskv.proto : [https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto](https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto)
+
+- 可靠分布式系统-paxos的直观解释 : [https://blog.openacid.com/algo/paxos](https://blog.openacid.com/algo/paxos)
+
+- protobuf : [https://developers.google.com/protocol-buffers](https://developers.google.com/protocol-buffers)
 
 - slide-11 : [https://blog.openacid.com/algo/paxos/#slide-11](https://blog.openacid.com/algo/paxos/#slide-11)
 
@@ -832,35 +854,24 @@ Reference:
 
 - slide-33 : [https://blog.openacid.com/algo/paxos/#slide-33](https://blog.openacid.com/algo/paxos/#slide-33)
 
-- issue : [https://github.com/openacid/paxoskv/issues/new/choose](https://github.com/openacid/paxoskv/issues/new/choose)
 
-- https://github.com/openacid/paxoskv/tree/naive : [https://github.com/openacid/paxoskv/tree/naive](https://github.com/openacid/paxoskv/tree/naive)
-
-- paxoskv : [https://github.com/openacid/paxoskv/tree/naive](https://github.com/openacid/paxoskv/tree/naive)
-
-- paxoskv.proto : [https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto](https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto)
-
-- PaxosKV : [https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto#L16](https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto#L16)
-
-- paxoskv.pb.go : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxoskv.pb.go](https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxoskv.pb.go)
-
-- impl.go : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go](https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go)
-
-- RunPaxos : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go#L46](https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go#L46)
-
-- TestCase1SingleProposer : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L11](https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L11)
-
-- TestCase2DoubleProposer : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L57](https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L57)
-
-- Example_setAndGetByKeyVer : [https://github.com/openacid/paxoskv/blob/naive/paxoskv/example_set_get_test.go](https://github.com/openacid/paxoskv/blob/naive/paxoskv/example_set_get_test.go)
-
-
-[paxos made simple]: http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple "paxos made simple"
+[Example_setAndGetByKeyVer]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/example_set_get_test.go
 [Leslie Lamport]: http://www.lamport.org/ "Leslie Lamport"
-[protobuf]: https://developers.google.com/protocol-buffers
-[install-protoc]: https://grpc.io/docs/protoc-installation/
+[PaxosKV]: https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto#L16
+[RunPaxos]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go#L46
+[TestCase1SingleProposer]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L11
+[TestCase2DoubleProposer]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L57
 [grpc]: https://grpc.io/
+[https://github.com/openacid/paxoskv/tree/naive]: https://github.com/openacid/paxoskv/tree/naive
+[impl.go]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go
+[install-protoc]: https://grpc.io/docs/protoc-installation/
+[issue]: https://github.com/openacid/paxoskv/issues/new/choose
+[paxos made simple]: http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple "paxos made simple"
+[paxoskv]: https://github.com/openacid/paxoskv/tree/naive
+[paxoskv.pb.go]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxoskv.pb.go
+[paxoskv.proto]: https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto
 [paxos的直观解释]: https://blog.openacid.com/algo/paxos                               "可靠分布式系统-paxos的直观解释"
+[protobuf]: https://developers.google.com/protocol-buffers
 [slide-11]: https://blog.openacid.com/algo/paxos/#slide-11
 [slide-27]: https://blog.openacid.com/algo/paxos/#slide-27
 [slide-28]: https://blog.openacid.com/algo/paxos/#slide-28
@@ -869,14 +880,3 @@ Reference:
 [slide-31]: https://blog.openacid.com/algo/paxos/#slide-31
 [slide-32]: https://blog.openacid.com/algo/paxos/#slide-32
 [slide-33]: https://blog.openacid.com/algo/paxos/#slide-33
-[issue]: https://github.com/openacid/paxoskv/issues/new/choose
-[https://github.com/openacid/paxoskv/tree/naive]: https://github.com/openacid/paxoskv/tree/naive
-[paxoskv]: https://github.com/openacid/paxoskv/tree/naive
-[paxoskv.proto]: https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto
-[PaxosKV]: https://github.com/openacid/paxoskv/blob/naive/proto/paxoskv.proto#L16
-[paxoskv.pb.go]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxoskv.pb.go
-[impl.go]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go
-[RunPaxos]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/impl.go#L46
-[TestCase1SingleProposer]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L11
-[TestCase2DoubleProposer]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L57
-[Example_setAndGetByKeyVer]: https://github.com/openacid/paxoskv/blob/naive/paxoskv/example_set_get_test.go

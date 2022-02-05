@@ -411,37 +411,31 @@ quorum定义成带权重的quorum: 一个quorum所包含的节点权重之和至
 
 Reference:
 
-- raft : [https://raft.github.io/](https://raft.github.io/)
-
-- joint consensus : [https://github.com/peterbourgon/raft/blob/master/JOINT-CONSENSUS.md](https://github.com/peterbourgon/raft/blob/master/JOINT-CONSENSUS.md)
-
-- Classic Paxos : [http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple](http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple)
-
-- Fast Paxos : [http://lamport.azurewebsites.net/pubs/pubs.html#fast-paxos](http://lamport.azurewebsites.net/pubs/pubs.html#fast-paxos)
-
-- paxos的直观解释 : [https://blog.openacid.com/algo/paxos](https://blog.openacid.com/algo/paxos)
-
 - Leslie Lamport : [http://www.lamport.org/](http://www.lamport.org/)
-
-- 多数派读写 : [https://zh.wikipedia.org/wiki/Quorum_(分布式系统)](https://zh.wikipedia.org/wiki/Quorum_(分布式系统))
-
-- paxos made simple : [http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple](http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple)
 
 - hierarchical quorum : [https://zookeeper.apache.org/doc/r3.3.2/zookeeperHierarchicalQuorums.html](https://zookeeper.apache.org/doc/r3.3.2/zookeeperHierarchicalQuorums.html)
 
 - hierarchical-quorum.py : [/post-res/quorum/hierarchical-quorum.py](/post-res/quorum/hierarchical-quorum.py)
 
+- joint consensus : [https://github.com/peterbourgon/raft/blob/master/JOINT-CONSENSUS.md](https://github.com/peterbourgon/raft/blob/master/JOINT-CONSENSUS.md)
+
+- paxos made simple : [http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple](http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple)
+
+- 可靠分布式系统-paxos的直观解释 : [https://blog.openacid.com/algo/paxos](https://blog.openacid.com/algo/paxos)
+
+- raft : [https://raft.github.io/](https://raft.github.io/)
+
 - zookeeper : [https://zookeeper.apache.org/](https://zookeeper.apache.org/)
 
+- 多数派读写 : [https://zh.wikipedia.org/wiki/Quorum_(分布式系统)](https://zh.wikipedia.org/wiki/Quorum_(分布式系统))
 
-[raft]: https://raft.github.io/  "raft"
-[joint consensus]: https://github.com/peterbourgon/raft/blob/master/JOINT-CONSENSUS.md "joint consensus"
-[Classic Paxos]: http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple  "Classic Paxos"
-[Fast Paxos]: http://lamport.azurewebsites.net/pubs/pubs.html#fast-paxos   "Fast Paxos"
-[paxos的直观解释]: https://blog.openacid.com/algo/paxos                               "可靠分布式系统-paxos的直观解释"
+
 [Leslie Lamport]: http://www.lamport.org/ "Leslie Lamport"
-[多数派读写]: https://zh.wikipedia.org/wiki/Quorum_(分布式系统) "多数派读写"
-[paxos made simple]: http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple "paxos made simple"
 [hierarchical quorum]: https://zookeeper.apache.org/doc/r3.3.2/zookeeperHierarchicalQuorums.html "hierarchical quorum"
 [hierarchical-quorum.py]: /post-res/quorum/hierarchical-quorum.py "hierarchical-quorum.py"
+[joint consensus]: https://github.com/peterbourgon/raft/blob/master/JOINT-CONSENSUS.md "joint consensus"
+[paxos made simple]: http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple "paxos made simple"
+[paxos的直观解释]: https://blog.openacid.com/algo/paxos                               "可靠分布式系统-paxos的直观解释"
+[raft]: https://raft.github.io/  "raft"
 [zookeeper]: https://zookeeper.apache.org/ "zookeeper"
+[多数派读写]: https://zh.wikipedia.org/wiki/Quorum_(分布式系统) "多数派读写"

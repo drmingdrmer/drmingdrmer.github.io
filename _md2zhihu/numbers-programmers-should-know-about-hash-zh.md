@@ -613,34 +613,31 @@ if __name__ == "__main__":
 
 Reference:
 
-- 累计分布函数 : [http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function](http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function)
-
-- 正态分布 : [http://en.wikipedia.org/wiki/Normal_distribution](http://en.wikipedia.org/wiki/Normal_distribution)
-
-- 二项式分布 : [http://en.wikipedia.org/wiki/Binomial_distribution](http://en.wikipedia.org/wiki/Binomial_distribution)
-
-- 线性探测 : [http://en.wikipedia.org/wiki/Linear_probing](http://en.wikipedia.org/wiki/Linear_probing)
-
-- tree : [http://en.wikipedia.org/wiki/Tree_(ata_structure)](http://en.wikipedia.org/wiki/Tree_(ata_structure))
-
-- 链表 : [http://en.wikipedia.org/wiki/Linked_list](http://en.wikipedia.org/wiki/Linked_list)
+- chaining : [http://en.wikipedia.org/wiki/Hash_table#Separate_chaining](http://en.wikipedia.org/wiki/Hash_table#Separate_chaining)
 
 - double-hash : [http://en.wikipedia.org/wiki/Double_hashing](http://en.wikipedia.org/wiki/Double_hashing)
 
-- chaining : [http://en.wikipedia.org/wiki/Hash_table#Separate_chaining](http://en.wikipedia.org/wiki/Hash_table#Separate_chaining)
+- tree : [http://en.wikipedia.org/wiki/Tree_(ata_structure)](http://en.wikipedia.org/wiki/Tree_(ata_structure))
 
-- sparse-hash : [http://code.google.com/p/sparsehash/](http://code.google.com/p/sparsehash/)
+- 二项式分布 : [http://en.wikipedia.org/wiki/Binomial_distribution](http://en.wikipedia.org/wiki/Binomial_distribution)
 
 - 均方差 : [https://zh.wikipedia.org/wiki/%E5%9D%87%E6%96%B9%E5%B7%AE](https://zh.wikipedia.org/wiki/%E5%9D%87%E6%96%B9%E5%B7%AE)
 
+- 正态分布 : [http://en.wikipedia.org/wiki/Normal_distribution](http://en.wikipedia.org/wiki/Normal_distribution)
 
-[累计分布函数]:  http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function
-[正态分布]:  http://en.wikipedia.org/wiki/Normal_distribution
-[二项式分布]:  http://en.wikipedia.org/wiki/Binomial_distribution
-[线性探测]:  http://en.wikipedia.org/wiki/Linear_probing
-[tree]:  http://en.wikipedia.org/wiki/Tree_(ata_structure)
-[链表]:  http://en.wikipedia.org/wiki/Linked_list
-[double-hash]:  http://en.wikipedia.org/wiki/Double_hashing
+- 累计分布函数 : [http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function](http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function)
+
+- 线性探测 : [http://en.wikipedia.org/wiki/Linear_probing](http://en.wikipedia.org/wiki/Linear_probing)
+
+- 链表 : [http://en.wikipedia.org/wiki/Linked_list](http://en.wikipedia.org/wiki/Linked_list)
+
+
 [chaining]:  http://en.wikipedia.org/wiki/Hash_table#Separate_chaining
-[sparse-hash]:  http://code.google.com/p/sparsehash/
+[double-hash]:  http://en.wikipedia.org/wiki/Double_hashing
+[tree]:  http://en.wikipedia.org/wiki/Tree_(ata_structure)
+[二项式分布]:  http://en.wikipedia.org/wiki/Binomial_distribution
 [均方差]:  https://zh.wikipedia.org/wiki/%E5%9D%87%E6%96%B9%E5%B7%AE
+[正态分布]:  http://en.wikipedia.org/wiki/Normal_distribution
+[累计分布函数]:  http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function
+[线性探测]:  http://en.wikipedia.org/wiki/Linear_probing
+[链表]:  http://en.wikipedia.org/wiki/Linked_list

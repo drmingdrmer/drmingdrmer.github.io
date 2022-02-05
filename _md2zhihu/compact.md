@@ -405,7 +405,7 @@ Hash length: int64
 
 -   [min-hash](https://en.wikipedia.org/wiki/MinHash)
 
--   [hash-collision 计算方式][hash-collision]
+-   [hash-collision 计算方式](http://drmingdrmer.github.io/math/hash/2017/08/05/numbers-programmers-should-know-about-hash-zh.html#%E6%AF%8F%E7%B1%BBbucket%E7%9A%84%E6%95%B0%E9%87%8F)
 
 
 

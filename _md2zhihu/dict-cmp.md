@@ -206,7 +206,7 @@ list object都可以使用), 可以理解为c语言中的指针的角色.
 -   上面提到的 **访问相等** 是一个直观的说法, 在大学里学过的编译原理中,
     它有更严谨的定义.
 
-    2个`dict` 各自组成的图可以认为是两个[自动机][dfa],
+    2个`dict` 各自组成的图可以认为是两个[自动机](https://zh.wikipedia.org/wiki/%E7%A1%AE%E5%AE%9A%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E8%87%AA%E5%8A%A8%E6%9C%BA),
     而1个图中所有的路径就是这个自动机表达的语言.
     这个题目的本质也就是判断2个自动机表达的语言是否等价.
 
@@ -217,7 +217,7 @@ list object都可以使用), 可以理解为c语言中的指针的角色.
 -   如果把所有路径经过的 **节点对** 合起来看做1个节点,
     那么这个组合的节点对和节点对之间的关联关系会组成一个新的图.
 
-    这个新的图是2个图的[张量积][tensor-product].
+    这个新的图是2个图的[张量积](https://en.wikipedia.org/wiki/Tensor_product_of_graphs).
     如果2个图是 **访问相等** 的, 那么他们跟这个新的张量积的图也是 **访问相等** 的.
 
     而这个问题的解法, 也可以看成对这个张量积图的一次遍历(虽然实际上没有生成这个图).
@@ -245,11 +245,8 @@ Reference:
 
 - dfa : [https://zh.wikipedia.org/wiki/%E7%A1%AE%E5%AE%9A%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E8%87%AA%E5%8A%A8%E6%9C%BA](https://zh.wikipedia.org/wiki/%E7%A1%AE%E5%AE%9A%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E8%87%AA%E5%8A%A8%E6%9C%BA)
 
-- rooted-graph : [https://en.wikipedia.org/wiki/Rooted_graph](https://en.wikipedia.org/wiki/Rooted_graph)
-
 - tensor-product : [https://en.wikipedia.org/wiki/Tensor_product_of_graphs](https://en.wikipedia.org/wiki/Tensor_product_of_graphs)
 
 
 [dfa]:  https://zh.wikipedia.org/wiki/%E7%A1%AE%E5%AE%9A%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E8%87%AA%E5%8A%A8%E6%9C%BA
-[rooted-graph]:  https://en.wikipedia.org/wiki/Rooted_graph
 [tensor-product]:  https://en.wikipedia.org/wiki/Tensor_product_of_graphs

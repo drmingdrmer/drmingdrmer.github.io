@@ -317,31 +317,28 @@ Several simulation programs used in this post are here:
 
 Reference:
 
-- cdf : [http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function](http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function)
-
-- normal-distribution : [http://en.wikipedia.org/wiki/Normal_distribution](http://en.wikipedia.org/wiki/Normal_distribution)
-
 - binomial-distribution : [http://en.wikipedia.org/wiki/Binomial_distribution](http://en.wikipedia.org/wiki/Binomial_distribution)
 
-- linear-probing : [http://en.wikipedia.org/wiki/Linear_probing](http://en.wikipedia.org/wiki/Linear_probing)
-
-- tree : [http://en.wikipedia.org/wiki/Tree_(ata_structure)](http://en.wikipedia.org/wiki/Tree_(ata_structure))
-
-- linked-list : [http://en.wikipedia.org/wiki/Linked_list](http://en.wikipedia.org/wiki/Linked_list)
-
-- double-hash : [http://en.wikipedia.org/wiki/Double_hashing](http://en.wikipedia.org/wiki/Double_hashing)
+- cdf : [http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function](http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function)
 
 - chaining : [http://en.wikipedia.org/wiki/Hash_table#Separate_chaining](http://en.wikipedia.org/wiki/Hash_table#Separate_chaining)
 
-- sparse-hash : [http://code.google.com/p/sparsehash/](http://code.google.com/p/sparsehash/)
+- double-hash : [http://en.wikipedia.org/wiki/Double_hashing](http://en.wikipedia.org/wiki/Double_hashing)
+
+- linear-probing : [http://en.wikipedia.org/wiki/Linear_probing](http://en.wikipedia.org/wiki/Linear_probing)
+
+- linked-list : [http://en.wikipedia.org/wiki/Linked_list](http://en.wikipedia.org/wiki/Linked_list)
+
+- normal-distribution : [http://en.wikipedia.org/wiki/Normal_distribution](http://en.wikipedia.org/wiki/Normal_distribution)
+
+- tree : [http://en.wikipedia.org/wiki/Tree_(ata_structure)](http://en.wikipedia.org/wiki/Tree_(ata_structure))
 
 
-[cdf]:  http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function
-[normal-distribution]:  http://en.wikipedia.org/wiki/Normal_distribution
 [binomial-distribution]:  http://en.wikipedia.org/wiki/Binomial_distribution
-[linear-probing]:  http://en.wikipedia.org/wiki/Linear_probing
-[tree]:  http://en.wikipedia.org/wiki/Tree_(ata_structure)
-[linked-list]:  http://en.wikipedia.org/wiki/Linked_list
-[double-hash]:  http://en.wikipedia.org/wiki/Double_hashing
+[cdf]:  http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function
 [chaining]:  http://en.wikipedia.org/wiki/Hash_table#Separate_chaining
-[sparse-hash]:  http://code.google.com/p/sparsehash/
+[double-hash]:  http://en.wikipedia.org/wiki/Double_hashing
+[linear-probing]:  http://en.wikipedia.org/wiki/Linear_probing
+[linked-list]:  http://en.wikipedia.org/wiki/Linked_list
+[normal-distribution]:  http://en.wikipedia.org/wiki/Normal_distribution
+[tree]:  http://en.wikipedia.org/wiki/Tree_(ata_structure)

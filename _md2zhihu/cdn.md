@@ -1,6 +1,6 @@
 
 在上篇
-[互联网中对象访问频率的91分布][zipf-blog]
+[互联网中对象访问频率的91分布](/tech/2019/10/30/zipf)
 我们通过
 `90%的流量由10%的内容产生`
 这句经验描述，
@@ -28,7 +28,7 @@ CDN ([Content delivery network](https://en.wikipedia.org/wiki/Content_delivery_n
 # 文件访问频率的分布规律
 
 按照前文
-[互联网中对象访问频率的91分布][zipf-blog]
+[互联网中对象访问频率的91分布](/tech/2019/10/30/zipf)
 中介绍，
 下图是从真实业务中提取的1000个URL访问次数，
 按照访问次数从高到低进行排序的zipf曲线:
@@ -327,19 +327,19 @@ CDN ([Content delivery network](https://en.wikipedia.org/wiki/Content_delivery_n
 
 Reference:
 
-- find-zipf.py : [/post-res/cache-hit/find-zipf.py](/post-res/cache-hit/find-zipf.py)
-
 - file-access-count.txt : [/post-res/cache-hit/file-access-count.txt](/post-res/cache-hit/file-access-count.txt)
 
-- 多项式回归 : [https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92](https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92)
+- find-zipf.py : [/post-res/cache-hit/find-zipf.py](/post-res/cache-hit/find-zipf.py)
 
 - zipf : [https://en.wikipedia.org/wiki/Zipf%27s_law](https://en.wikipedia.org/wiki/Zipf%27s_law)
 
 - zipf-blog : [/tech/2019/10/30/zipf](/tech/2019/10/30/zipf)
 
+- 多项式回归 : [https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92](https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92)
 
-[find-zipf.py]: /post-res/cache-hit/find-zipf.py
+
 [file-access-count.txt]: /post-res/cache-hit/file-access-count.txt
-[多项式回归]:  https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92
+[find-zipf.py]: /post-res/cache-hit/find-zipf.py
 [zipf]:  https://en.wikipedia.org/wiki/Zipf%27s_law
 [zipf-blog]:  /tech/2019/10/30/zipf
+[多项式回归]:  https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92
