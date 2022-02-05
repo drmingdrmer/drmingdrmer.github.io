@@ -60,14 +60,14 @@ Options:
 运行 `git-auto-squash` 后将所有 `fixup!` 开头的message的commit
 合并到最早遇到的非`fixup!`的提交点"ok"上.
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/git-auto-squash/example.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/git-auto-squash/51e34d0769a6a39b-example.png)
 
 ## 处理merge的栗子
 
 `git-auto-squash` 也可以处理merge的fixup。对于merge
 commit，如果它的其中一个parent被squash掉了，它也会被squash掉:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/git-auto-squash/merge.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/git-auto-squash/0a8785639b9b1959-merge.png)
 
 这样在某些merge commit有3个或3个以上的parent的时候，会丢弃某些中间的merge点。
 但不影响最终结果。

@@ -3,7 +3,7 @@
 
 用200行代码实现一个基于paxos的kv存储, 以最简洁的形式展示paxos如何运行, 作为 [paxos的直观解释](https://blog.openacid.com/algo/paxos) 这篇教程中的代码示例部分
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/paxoskv/paxoskv-banner-small.jpg)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/paxoskv/85599716b25d9ee4-paxoskv-banner-small.jpg)
 
 <!--more-->
 
@@ -109,7 +109,7 @@ func ServeAcceptors(acceptorIds []int64) ([]*grpc.Server)
 > -   vrnd 跟v是一对, 它记录了在哪个Round中v被写入了.
 
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/paxoskv/paxos-27.jpg)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/paxoskv/a21112abd7e1670a-paxos-27.jpg)
 
 原文中这些名词是参考了 [paxos made simple](http://lamport.azurewebsites.net/pubs/pubs.html#paxos-simple) 中的名称, 但在 [Leslie Lamport](http://www.lamport.org/)
 后面的几篇paper中都换了名称, 为了后续方便, 在[paxoskv](https://github.com/openacid/paxoskv/tree/naive)的代码实现中也做了相应的替换:
@@ -318,7 +318,7 @@ Acceptor, 是这个系统里的server端, 监听一个端口,
 根据paxos的定义, Acceptor的逻辑很简单:
 在 [slide-28](https://blog.openacid.com/algo/paxos/#slide-28) 中描述:
 
-![img](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/paxoskv/paxos-28.jpg)
+![img](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/paxoskv/95ed112c0a7f8a2e-paxos-28.jpg)
 
 根据教程里的描述, 为 KVServer 定义handle Prepare-request的代码:
 
@@ -384,7 +384,7 @@ func (s *KVServer) getLockedVersion(
 ```
 
 handle Accept-request的处理类似, 在 [slide-31](https://blog.openacid.com/algo/paxos/#slide-31) 中描述:
-![img](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/paxoskv/paxos-31.jpg)
+![img](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/paxoskv/939dbf24b470e9d4-paxos-31.jpg)
 
 `Accept()` 要记录3个值,
 
@@ -565,7 +565,7 @@ func (p *Proposer) Phase2(
 > 这时实际上可以认为X执行了一次(不知是否已经中断的)其他客户端(Proposer)的修复.
 
 
-![img](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/paxoskv/paxos-29.jpg)
+![img](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/paxoskv/27ff77f49069e6b2-paxos-29.jpg)
 
 基于 Acceptor 的服务端和 Proposer 2个 Phase 的实现,
 最后把这些环节组合到一起组成一个完整的paxos, 
@@ -696,7 +696,7 @@ v := prop.RunPaxos(acceptorIds, nil)
 
 第1个例子是 paxos 无冲突的运行 [slide-32](https://blog.openacid.com/algo/paxos/#slide-32):
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/paxoskv/paxos-32.jpg)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/paxoskv/fa69ebc2d38f52c9-paxos-32.jpg)
 
 把它写成test case, 确认教程中每步操作之后的结果都如预期
 [TestCase1SingleProposer](https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L11) :
@@ -756,7 +756,7 @@ func TestCase1SingleProposer(t *testing.T) {
 第2个例子对应2个Proposer遇到冲突并解决冲突的例子, 略长不贴在文中了,
 代码可以在 [TestCase2DoubleProposer](https://github.com/openacid/paxoskv/blob/naive/paxoskv/paxos_slides_case_test.go#L57) 看到
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/paxoskv/paxos-33.jpg)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/paxoskv/66fc9e4b5617edde-paxos-33.jpg)
 
 # 下一步
 

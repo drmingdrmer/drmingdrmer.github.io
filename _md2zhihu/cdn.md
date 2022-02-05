@@ -21,7 +21,7 @@ CDN ([Content delivery network](https://en.wikipedia.org/wiki/Content_delivery_n
 
 ## 本文结构:
 
-![xxx](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/cdn/bigmap.jpg)
+![xxx](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/cdn/8f9f27966ffec647-bigmap.jpg)
 
 <!--more-->
 
@@ -33,7 +33,7 @@ CDN ([Content delivery network](https://en.wikipedia.org/wiki/Content_delivery_n
 下图是从真实业务中提取的1000个URL访问次数，
 按照访问次数从高到低进行排序的zipf曲线:
 
-![xxx](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/cdn/1kfile.png)
+![xxx](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/cdn/a55f31f9083e2851-1kfile.png)
 
 <center>图1 访问频率分布</center>
 
@@ -73,7 +73,7 @@ CDN ([Content delivery network](https://en.wikipedia.org/wiki/Content_delivery_n
 -   边缘机房的存储容量占源站文件总量的比值: `e`(edge)，例如(图1)中，`e=10%`，每个边缘机房能存储1/10的内容。
 -   回源率`b`(backsource) 是边缘机房消耗的回源带宽跟这个边缘机房下载带宽的比值，例如(图1)中，`e=10%`时，`b=6%`。
 
-![xxx](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/cdn/cdn-arch.jpg)
+![xxx](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/cdn/83f8dfb288d235e5-cdn-arch.jpg)
 
 其中下载带宽和文件总量`n`是业务属性;
 `e`和`b`是CDN的属性，不取决于业务，是由CDN提供商选择，并最终决定成本的因素。
@@ -98,7 +98,7 @@ CDN ([Content delivery network](https://en.wikipedia.org/wiki/Content_delivery_n
 
 <img src="https://www.zhihu.com/equation?tex=log%28f%28k%29%29%20%3D%20log%28c%29%20-%20s%20%5Ctimes%20log%28k%29%5C%5C" alt="log(f(k)) = log(c) - s \times log(k)\\" class="ee_img tr_noresize" eeimg="1">
 
-![xxx](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/cdn/1kloglog-regression.png)
+![xxx](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/cdn/29ff04ae01d0e13e-1kloglog-regression.png)
 
 <center>(图2) 取对数后呈现线性关系</center>
 
@@ -272,7 +272,7 @@ CDN ([Content delivery network](https://en.wikipedia.org/wiki/Content_delivery_n
 把`e`变化作为x轴，画出边缘存储成本和回源带宽成本随`e`变化的曲线如下图，
 趋势看起来就更清楚了:
 
-![xxx](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/cdn/edge-backsource-cost.png)
+![xxx](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/cdn/310f872d60c8787b-edge-backsource-cost.png)
 
 我们看到总成本(红色曲线)在这个图上有一个极小值，大概在`e=6%`的位置。
 

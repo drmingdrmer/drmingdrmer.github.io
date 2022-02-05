@@ -5,7 +5,7 @@
         ></iframe>
 Simple, stupid and fast tab-bar for VIM.
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/vim-tabbar/screenshot.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/vim-tabbar/fe863d6b00b0c530-screenshot.png)
 
 <!--more-->
 

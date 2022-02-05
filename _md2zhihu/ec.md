@@ -135,7 +135,7 @@
 
 下图摘自 [backblaze发布的硬盘故障率统计](https://www.backblaze.com/blog/hard-drive-reliability-stats-q1-2016/)
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/ec/drive-stats-2016-q1-failure-by-mfg.jpg)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/ec/1fdaccd1a69c0ddc-drive-stats-2016-q1-failure-by-mfg.jpg)
 
 如果我有2块数据(每块可能是1个1G大小的电影): <img src="https://www.zhihu.com/equation?tex=%20d_1%20" alt=" d_1 " class="ee_img tr_noresize" eeimg="1"> 和 <img src="https://www.zhihu.com/equation?tex=%20d_2%20" alt=" d_2 " class="ee_img tr_noresize" eeimg="1">,
 为了达到高可靠性, 我需要对每个数据复制3份,

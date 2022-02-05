@@ -15,7 +15,7 @@ If `n` <img src="https://www.zhihu.com/equation?tex=%20%5Capprox%20" alt=" \appr
 The following chart created by program simulation shows distribution of 20 keys
 over 20 buckets.
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/numbers-programmers-should-know-about-hash/dist-1-with-label.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/numbers-programmers-should-know-about-hash/5866d5812ab7bf05-dist-1-with-label.png)
 
 <!--more-->
 
@@ -92,7 +92,7 @@ the picture shows:
 </tr>
 </table>
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/numbers-programmers-should-know-about-hash/load-factor-empty-collision.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/numbers-programmers-should-know-about-hash/82ded63f1c56e284-load-factor-empty-collision.png)
 
 > **0.75** has been chosen as upper limit of `load factor` not only because
 > of concerns of collision rate, but also because of the way [linear-probing](http://en.wikipedia.org/wiki/Linear_probing)
@@ -143,9 +143,9 @@ Let the average number of keys in each bucket be:
 The following charts show what distribution is like when `load factor` is **10**,
 **100** and **1000**:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/numbers-programmers-should-know-about-hash/dist-10.png)
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/numbers-programmers-should-know-about-hash/dist-100.png)
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/numbers-programmers-should-know-about-hash/dist-1000.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/numbers-programmers-should-know-about-hash/ff934b2b0dc9cad3-dist-10.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/numbers-programmers-should-know-about-hash/36f0393747176629-dist-100.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/numbers-programmers-should-know-about-hash/082c8fc0c0a1c070-dist-1000.png)
 
 As `load factor` becomes higher, the gap between the most keys and the fewest
 keys becomes smaller.

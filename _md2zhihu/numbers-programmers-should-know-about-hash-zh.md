@@ -49,7 +49,7 @@
 下面这个图更直观的展示了当`n=b=20`的时候, hash表中每个bucket中key的个数的分布,
 (我们按照key的数量对bucket做了排序):
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/numbers-programmers-should-know-about-hash-zh/dist-1-with-label.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/numbers-programmers-should-know-about-hash-zh/5866d5812ab7bf05-dist-1-with-label.png)
 
 <!--more-->
 
@@ -115,7 +115,7 @@
 
 更直观1点, 我们用一个图来展示空bucket率 和 冲突率 随`n/b`的变化趋势:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/numbers-programmers-should-know-about-hash-zh/load-factor-empty-collision.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/numbers-programmers-should-know-about-hash-zh/82ded63f1c56e284-load-factor-empty-collision.png)
 
 <a class="md-anchor" name="key的数量对bucket的均匀程度的影响"></a>
 
@@ -280,9 +280,9 @@ hash表特性小贴士:
 
 下面3个图模拟了 `b=20`, `n/b`分别是 `10`, `100`, `1000`时, bucket中key的数量分布.
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/numbers-programmers-should-know-about-hash-zh/dist-10.png)
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/numbers-programmers-should-know-about-hash-zh/dist-100.png)
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/numbers-programmers-should-know-about-hash-zh/dist-1000.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/numbers-programmers-should-know-about-hash-zh/ff934b2b0dc9cad3-dist-10.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/numbers-programmers-should-know-about-hash-zh/36f0393747176629-dist-100.png)
+![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/numbers-programmers-should-know-about-hash-zh/082c8fc0c0a1c070-dist-1000.png)
 
 我们看出当 `n/b` 增大时, 最多key的bucket和最少key的bucket的差距在逐渐缩小.
 下面的表里列出了随着`b` 和 `n/b`增大, key分布的均匀程度((most-fewset)/most)的变化:

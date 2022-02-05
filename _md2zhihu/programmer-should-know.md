@@ -33,7 +33,7 @@
 
 -   想要装一个新工具的话, 等0.1版本出来再说, 让其他人当小白鼠(`Let other people be guinea pigs`).
 
-    ![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@_md2zhihu/asset/programmer-should-know/guinea-pig.png)
+    ![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/programmer-should-know/8e60a372398bd3cd-guinea-pig.png)
 
 -   好的程序员写好的代码.
     杰出的程序员不写代码.
