@@ -6,6 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     # - uses: drmingdrmer/md2zhihu@v0.12
+    # - uses: drmingdrmer/md2zhihu@ci
     - uses: drmingdrmer/md2zhihu@main
 
       env:
@@ -15,3 +16,5 @@ jobs:
         pattern: >
             _posts/*.md
             _posts/*.markdown
+
+        asset_repo: https://${{ secrets.GITEE_PUSH_DRDRXP_REPO }}@gitee.com/drdrxp/bed.git
