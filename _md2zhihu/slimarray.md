@@ -5,7 +5,7 @@ slimarray 是一个静态整数压缩数组, 现实数据达到和gzip相当的�
 无需解压就可以直接使用.
 [slimarray at github](https://github.com/openacid/slimarray)
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/slimarray/85599716b25d9ee4-paxoskv-banner-small.jpg)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/slimarray/85599716b25d9ee4-paxoskv-banner-small.jpg)
 
 <!--more-->
 
@@ -14,7 +14,7 @@ slimarray 是一个静态整数压缩数组, 现实数据达到和gzip相当的�
 在时序数据库, 或列存储为基础的系统中, 很常见的形式就是存储一个整数数组,
 例如 [slim](https://github.com/openacid/slim) 这个项目按天统计的 star 数:
 
-[![Stargazers over time](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/slimarray/18b61671112f3aeb-slim.jpg)](https://starchart.cc/openacid/slim)
+[![Stargazers over time](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/slimarray/18b61671112f3aeb-slim.jpg)](https://starchart.cc/openacid/slim)
 
 这类数据有有很明显的统一的变化趋势, 对这类数据的存储,
 我们可以利用数据分布的特点, 将整体数据的大小压缩到**几分之一**.

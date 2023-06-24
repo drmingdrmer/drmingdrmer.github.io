@@ -6,7 +6,7 @@
 paxos可以看做是2次 [多数派读写](https://zh.wikipedia.org/wiki/Quorum_(分布式系统)) 完成一次强一致读写.  多数派要求半数以上的参与者(paxos中的Acceptor)接受某笔操作.  但 [多数派读写](https://zh.wikipedia.org/wiki/Quorum_(分布式系统)) 并不一定需要多于半数的参与者, 分布式系统中某些场合的优化, 可以通过减少参与者数量来完成的.
 本文介绍这些优化对系统可用性产生的影响, 根据什么标准来选择和调整这些参数.
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/quorum/bdbba35e92bceb3a-quorum-banner-small.jpg)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/quorum/bdbba35e92bceb3a-quorum-banner-small.jpg)
 
 <!--more-->
 
@@ -31,7 +31,7 @@ paxos可以看做是2次 [多数派读写](https://zh.wikipedia.org/wiki/Quorum_
 > 在这种策略下, 数据可靠性足够, 宕机容忍足够, 任一机器故障也能读到全部数据.
 
 
-![img](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/quorum/26db0e64b3797695-nwr.jpg)
+![img](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/quorum/26db0e64b3797695-nwr.jpg)
 
 [多数派读写](https://zh.wikipedia.org/wiki/Quorum_(分布式系统)), 也可称作 quorum-rw, wikipedia上的描述如下:
 

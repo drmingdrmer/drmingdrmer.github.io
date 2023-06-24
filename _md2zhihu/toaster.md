@@ -1,7 +1,7 @@
 
 <!--excerpt-->
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/58c79c7fb55c5f89-toaster.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/58c79c7fb55c5f89-toaster.png)
 
 我们平时印象中的面包机是这个样子的:
 
@@ -29,7 +29,7 @@
 
 ### 大概400种零件, 100种不同的材料:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/3564c5ff309c3942-toaster-1.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/3564c5ff309c3942-toaster-1.png)
 
 看起来...工程会很庞大...但是聪明的 Thomas 经过一系列研究, 简化和删减,
 把材料和零件大大缩减了, 看起来是一个可以完成的任务了:
@@ -41,23 +41,23 @@
 
 ### 这是简化后的材料列表:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/cc150d36e9674abb-toaster-2.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/cc150d36e9674abb-toaster-2.png)
 
 ### 有了计划和方案, Thomas开始了兴致勃勃的制作过程
 
 首先 Thomas 托人从一家朋友的铁矿, 捎带了一箱铁矿石:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/1509117a380bae1a-toaster-3.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/1509117a380bae1a-toaster-3.png)
 
 ### 去博物馆找到了冶金学的教科书:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/a52dbdc778b89651-toaster-4.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/a52dbdc778b89651-toaster-4.png)
 
 有了理论, 有了物料, 集中起来!
 
 ### Thomas 用吹风机和垃圾桶搭建了一个炼铁炉:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/dfc4a160f6eb6167-toaster-5.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/dfc4a160f6eb6167-toaster-5.png)
 
 然后 Thomas 用这个炼铁炉炼出了一堆...
 
@@ -71,7 +71,7 @@ Thomas 的炼铁计划失败了...
 
 (有点专利流氓的味道)
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/9baf7abad04ac88f-toaster-6.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/9baf7abad04ac88f-toaster-6.png)
 
 经过30分钟的微波轰炸, Thomas 终于融化了铁矿石...
 
@@ -79,11 +79,11 @@ Thomas 用融化的铁做出了面包机的框架.
 
 ### 接着, Thomas 从工厂搞来3大桶工业废水, 将其中溶解的铜离子置换出来, 变成铜:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/dd999d325d945355-toaster-7.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/dd999d325d945355-toaster-7.png)
 
 ### 做了3个插头:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/939e931926959bbb-toaster-8.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/939e931926959bbb-toaster-8.png)
 
 最后要准备的东西, 是面包机外壳用的塑料. 然而... Thomas 打了30分钟电话, 也没能成功说服油井工人帮他提一壶石油回来.
 
@@ -103,7 +103,7 @@ Thomas 用融化的铁做出了面包机的框架.
 
 ### 塑料...已经快被蜗牛吃光了!
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/ad2c6ce716250dc7-toaster-9.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/ad2c6ce716250dc7-toaster-9.png)
 
 绝望至极的 Thomas 只好再寻他法. 他去了1个废物回收站, 拉回一箱废料...经过
 
@@ -115,17 +115,17 @@ Thomas 用融化的铁做出了面包机的框架.
 
 ### 最后终于得到了一个面包机的外壳:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/11650dfb547e8f6e-toaster-10.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/11650dfb547e8f6e-toaster-10.png)
 
 到此为止, 基本上凑齐了所有的材料和零件, Thomas 开始正式组装面包机!
 
 ### 又经过几天紧张的忙碌, 最后的成品面包机大概长成这个样子:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/4c0adc906d57a17b-toaster-11.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/4c0adc906d57a17b-toaster-11.png)
 
 ### 没有塑料外壳的时候, 面包机里面的结构大概是这个样子:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/491fd820d331bece-toaster-12.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/491fd820d331bece-toaster-12.png)
 
 接下来就是令人兴奋的试用了!
 
@@ -145,13 +145,13 @@ Thomas 用融化的铁做出了面包机的框架.
 
 并且为这个项目专门写了一本书讲述面包机的制作过程: `<<The Toaster Project>>`
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/6c8abb84199f1ab3-toaster-13.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/6c8abb84199f1ab3-toaster-13.png)
 
 hm...即使是面包机这么简单的小东西, 其制作过程也是十分不易的.
 
 ### 在这个过程中 Thomas 所有用到的东西罗列如下:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/f22580981e13016e-toaster-14.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/f22580981e13016e-toaster-14.png)
 
 这里还不包括被蜗牛吃掉塑料的问题...
 
@@ -340,7 +340,7 @@ IT也不同于传统业: IT行业中, 信息的复制, 经验的复制, 都不�
 
 从最初的几个工具支持一个产品, 几个工具支持一个产品, 演变成所有的工具支持所有的产品:
 
-![](https://cdn.jsdelivr.net/gh/drmingdrmer/drmingdrmer.github.io@master-md2zhihu-asset/toaster/c930a283c22692da-products.png)
+![](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/toaster/c930a283c22692da-products.png)
 
 如果像上图这样,从3个产品各自独立维护3个它们所需的工具(有重复).
 到右边5个工具共同支持3个产品, 需要花费精力的从9个单位变成5个单位,
