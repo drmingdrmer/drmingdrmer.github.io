@@ -5,13 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    # - uses: drmingdrmer/md2zhihu@v0.12
-    # - uses: drmingdrmer/md2zhihu@ci
     - uses: drmingdrmer/md2zhihu@main
-
-      env:
-        GITHUB_USERNAME: ${{ github.repository_owner }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         pattern: >
             _posts/*.md
