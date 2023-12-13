@@ -1,7 +1,7 @@
 
 原文: [Art of Pull Requests](https://hackernoon.com/the-art-of-pull-requests-6f0f099850f9)
 
-![img](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/pr/cb73d713d92c35af-1*KlreYtsrnlfVdAfyjZjNgw.jpeg)
+![img](https://gitee.com/drdrxp/bed/raw/33-bend-meta-md2zhihu-asset/pr/cb73d713d92c35af-1*KlreYtsrnlfVdAfyjZjNgw.jpeg)
 
 [正如我之前写的](http://blog.viacom.tech/2017/04/07/effective-remote-teams/)，
 我们是一个远程团队，团队成员遍布世界各地。
@@ -42,13 +42,13 @@
 
 我们需要与长期存在的feature分支作斗争，因为它们是所有邪恶的根源!
 
-![img](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/pr/40a532ad9a35e926-0*H1oFzCkF0Qo3RCku.png)
+![img](https://gitee.com/drdrxp/bed/raw/33-bend-meta-md2zhihu-asset/pr/40a532ad9a35e926-0*H1oFzCkF0Qo3RCku.png)
 
 因此，PR需要能够快速地查看，以便快速地合并代码。 但这只适用于小的PR!
 你不会在一个大的PR上得到一个好的review，它要花很长时间才能把它merge。
 因此，一些公司对每一份PR的行数都有限制。一般来说，它们的长度应该少于300行，否则它们就不适合被review了。
 
-![img](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/pr/53431dbdb471e764-0*hMIZJvQxEDOK0H1k.png)
+![img](https://gitee.com/drdrxp/bed/raw/33-bend-meta-md2zhihu-asset/pr/53431dbdb471e764-0*hMIZJvQxEDOK0H1k.png)
 
 ## PR越长，review的人就越累
 
@@ -60,7 +60,7 @@
 让review人员更容易理解您的更改。 他们可能不会像你一样熟悉你正在做的事情。
 添加一个好的[描述和一些截图](https://hackernoon.com/no-description-provided-8d9e0f3a3abb):
 
-![img](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/pr/3079f56d76c52cbf-0*m1nk8pj1XtuU3ect.png)
+![img](https://gitee.com/drdrxp/bed/raw/33-bend-meta-md2zhihu-asset/pr/3079f56d76c52cbf-0*m1nk8pj1XtuU3ect.png)
 
 ## 防止上下文切换
 
@@ -91,11 +91,11 @@ CI应该帮助处理大量的代码检查(静态分析:反模式、复杂性、�
 PR是与团队成员的讨论。 不要把它当成教学课程。 提出建议不要要求他们。
 友好。 使用表情符号和动图让读者对你的建议会心一笑:
 
-![img](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/pr/59b011ca05f92e90-0*MkccokzNveEgWzcL.png)
+![img](https://gitee.com/drdrxp/bed/raw/33-bend-meta-md2zhihu-asset/pr/59b011ca05f92e90-0*MkccokzNveEgWzcL.png)
 
 评论是对同事的反馈，也有积极的反馈，如果某件事做得很好，你应该心存感激。
 
-![img](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/pr/84f6f5e8ab67c27f-0*NY4ftERy14vj7nWc.png)
+![img](https://gitee.com/drdrxp/bed/raw/33-bend-meta-md2zhihu-asset/pr/84f6f5e8ab67c27f-0*NY4ftERy14vj7nWc.png)
 
 ## PR不适合进行长时间的架构讨论
 
@@ -120,7 +120,7 @@ PR的作用在于，确保质量水平提高，并发现潜在的bug和副作用
 
 原文: [Art of Pull Requests](https://hackernoon.com/the-art-of-pull-requests-6f0f099850f9)
 
-![openacid](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/pr/a6ce5c783e584559-qrcode-text.png)
+![openacid](https://gitee.com/drdrxp/bed/raw/33-bend-meta-md2zhihu-asset/pr/a6ce5c783e584559-qrcode-text.png)
 
 
 

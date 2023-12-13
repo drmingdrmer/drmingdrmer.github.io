@@ -10,7 +10,7 @@
 一般符合这种互联网访问模型的曲线是下图这样的.
 对每个访问的url做独立计数, 并按照从访问最多到最低排序:
 
-![xxx](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/zipf/a55f31f9083e2851-1kfile.png)
+![xxx](https://gitee.com/drdrxp/bed/raw/33-bend-meta-md2zhihu-asset/zipf/a55f31f9083e2851-1kfile.png)
 
 这句是一个经验结论, 从它可以得出我们的频度分布公式:
 也就是[zipf](https://en.wikipedia.org/wiki/Zipf%27s_law) 模型.
@@ -24,7 +24,7 @@
 即: k的对数跟y的对数呈现**线性关系**.
 线性太棒了, 简单又好用!
 
-![xxx](https://gitee.com/drdrxp/bed/raw/master-md2zhihu-asset/zipf/21c6c4d04c773512-1kloglog.png)
+![xxx](https://gitee.com/drdrxp/bed/raw/33-bend-meta-md2zhihu-asset/zipf/21c6c4d04c773512-1kloglog.png)
 
 用这个公式我们可以更好的了解和控制数据的访问模型, 做更多的事情.
 以下是得出这个结论的愉快的推倒过程.
